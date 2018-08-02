@@ -11,6 +11,7 @@ For example, if s = 'abcbcd', then your program should print
 Longest substring in alphabetical order is: abc.'''
 
 def main():
+    '''This program is to find the  highest alphabetical sequence in a given string'''
     string = input()
     end = 0
     highest = 0
@@ -20,7 +21,7 @@ def main():
             count += 1
             if count > highest:
                 highest = count
-                end =  var + 1
+                end =  var+1
         else:
             count = 0
     num = end-highest
