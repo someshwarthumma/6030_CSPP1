@@ -6,7 +6,7 @@
 #Number of vowels: 5
 '''
 def main():
-'''This program is used to count the number of Vowels in a string.'''
+    '''This program is used to count the number of Vowels in a string'''
     var1_ = input()
     num = 0
     for var in var1_:
