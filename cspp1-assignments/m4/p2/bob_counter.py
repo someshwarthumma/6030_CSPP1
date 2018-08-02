@@ -13,5 +13,5 @@ def main():
         if (string[i] == "b" and string[i+1] == "o" and string[i+2] == "b"):
             count_ = count_+1
     print(count_)
-if __name__== "__main__":
+if __name__ == "__main__":
     main()
