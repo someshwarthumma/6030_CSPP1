@@ -11,7 +11,7 @@
 
 def main():
     # input is captured in s
-    given_number = int(input('enterthe number'))
+    given_number = int(input())
     guess = 0
     step = 1
     while guess < given_number :
