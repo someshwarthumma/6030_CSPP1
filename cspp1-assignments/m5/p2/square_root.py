@@ -19,7 +19,7 @@ def main():
             break
         guess = guess+step 
     #guess = round(guess)
-    if (guess**2-given_number) == 0:
+    if (guess**2-given_number) < epsilon:
         print(str(guess))
     else :
         print(str(given))
