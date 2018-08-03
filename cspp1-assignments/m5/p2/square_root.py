@@ -8,7 +8,7 @@ def main():
     while guess < given_number:
         if abs(guess**2 - given_number) < epsilon:
             break
-        guess = guess+step 
+        guess = guess+step
     print(str(guess))
 if __name__ == "__main__":
     main()
