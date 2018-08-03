@@ -9,9 +9,9 @@ def main():
     while abs(mid**2-num) >= epsilon:
         if mid**2 < num:
             low = mid
-        else: 
-            high = mid  
-        mid = (low+high)/2 
+        else:
+            high = mid
+        mid = (low+high)/2
     print(str(mid))
 if __name__ == "__main__":
     main()
