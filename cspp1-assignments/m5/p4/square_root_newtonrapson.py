@@ -1,15 +1,6 @@
-# Write a python program to find the square root of the given number
-# using approximation method
-
-# testcase 1
-# input: 25
-# output: 4.999999999999998
-
-# testcase 2
-# input: 49
-# output: 6.999999999999991
-
+'''# Write a python program to find the square root of the given number'''
 def main():
+    '''to find the square root by newton rapson method'''
     num = int(input())
     epsilon = 0.01
     guess = num/2.0
