@@ -10,11 +10,11 @@
 # output: 6.999999999999991
 
 def main():
-    num= int(input())
+    num = int(input())
     epsilon = 0.01
     guess = num/2.0
     while (guess*guess-num) >= epsilon and guess <= num:
-        guess=guess-(((guess**2)-num)/(2*guess))
+        guess = guess-(((guess**2)-num)/(2*guess))
     print(guess)
-if __name__== "__main__":
+if __name__ == "__main__":
     main()
