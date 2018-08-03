@@ -4,7 +4,7 @@ def main():
     given_number = int(input())
     guess = 0
     step = 1
-    while guess < given_number :
+    while guess < given_number:
         if abs(guess**3 - given_number) == 0:
             break
         guess = guess+step
