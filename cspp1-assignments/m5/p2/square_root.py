@@ -20,9 +20,9 @@ def main():
         guess = guess+step 
     guess = round(guess)
     if (guess**2-given_number) == 0:
-        print(str(given_number)+" is perfect sqaure")
+        print(str(guess))
     else :
-        print(str(given_number)+" is not a perfect square")
+        print(str(given))
     # your code starts here
 
 if __name__== "__main__":
