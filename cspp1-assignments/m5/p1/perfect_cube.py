@@ -11,6 +11,6 @@ def main():
     if (guess**3 - given_number) == 0 :
         print(str(given_number)+" is a perfect cube")
     else :
-        print(str(given_number)+" not a perfect cube")
+        print(str(given_number)+" is not a perfect cube")
 if __name__ == "__main__":
     main()
