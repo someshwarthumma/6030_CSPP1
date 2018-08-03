@@ -7,10 +7,10 @@ def main():
     while guess < given_number :
         if abs(guess**3 - given_number) == 0:
             break
-        guess = guess+step 
+        guess = guess+step
     if (guess**3 - given_number) == 0:
         print(str(given_number)+" is a perfect cube")
-    else :
+    else:
         print(str(given_number)+" is not a perfect cube")
 if __name__ == "__main__":
     main()
