@@ -1,13 +1,6 @@
-'''
-Given a  number int_input, find the product of all the digits
-example: 
-    input: 123
-    output: 6
-'''
+'''Given a  number int_input, find the product of all the digits'''
 def main():
-    '''
-    To display the product of all the digits in a given number
-    '''
+    '''To display the product of all the digits in a given number'''
     int_input = int(input())
     flag=0
     if int_input < 0:
