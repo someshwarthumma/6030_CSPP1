@@ -5,15 +5,15 @@ Output has three spaces, which are to be replaced with these special characters
 '''
 def main():
     '''
-    Read string from the input, store it in variable str_input.
+    Replace all the special characters(!, @, #, $, %, ^, &, *) in a given string with a space.
     '''
     str_input = input()
-    temp = ""
+    temp = ""#Temporary variable
     for variable in str_input:
-        if variable in "!@#$%^&*":
+        if variable in "!@#$%^&*":#if the character in variable is a special character then append a space
             temp = temp+" "
         else:
-            temp = temp+variable
+            temp = temp+variable#else append the same
     print(temp)
 if __name__ == "__main__":
     main()
