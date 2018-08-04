@@ -9,6 +9,9 @@ def main():
     To display the product of all the digits in a given number
     '''
     int_input = int(input())
+    if int_input < 0
+    	flag = 1
+    	int_input = abs(int_input)
     temp2 = 0
     temp1 = 1
     #if input >= 1 then perform while loop 
@@ -19,6 +22,9 @@ def main():
     if int_input == 0 :
         print(temp2)
     else:
-    	print(temp1)
+    	if flag == 1
+    	print(-temp1)
+    	else:
+    		print(temp1)
 if __name__ == "__main__":
     main()
