@@ -13,14 +13,12 @@ def main():
     temp1 = 1
     #if input >= 1 then perform while loop 
     while int_input/10>=1:
-    	#store last digit in temp2
     	temp2 = int_input%10
-    	#multiply temp2 with temp1 
-    	#store the result in temp1
     	temp1 = temp1*temp2
-    	#update the number by removing the last digit
     	int_input = int_input//10
-    #print product of all numbers
-    print(temp1)
+    if int_input == 0 :
+        print(temp2)
+    else:
+    	print(temp1)
 if __name__ == "__main__":
     main()
