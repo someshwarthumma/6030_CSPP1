@@ -10,10 +10,12 @@ def main():
     str_input = input()
     temp = ""#Temporary variable
     for variable in str_input:
-        if variable in "!@#$%^&*":#if the character in variable is a special character then append a space
+        #if the character in variable is a special character then append a space
+        if variable in "!@#$%^&*":
             temp = temp+" "
+        #else append the same
         else:
-            temp = temp+variable#else append the same
+            temp = temp+variable
     print(temp)
 if __name__ == "__main__":
     main()
