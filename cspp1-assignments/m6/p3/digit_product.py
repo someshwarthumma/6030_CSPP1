@@ -11,8 +11,8 @@ def main():
     int_input = int(input())
     temp2 = 0
     temp1 = 1
-    #if input > 1 then perform while loop 
-    while int_input/10>1:
+    #if input >= 1 then perform while loop 
+    while int_input/10>=1:
     	#store last digit in temp2
     	temp2 = int_input%10
     	#multiply temp2 with temp1 
