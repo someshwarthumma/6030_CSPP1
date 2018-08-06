@@ -1,10 +1,10 @@
-# Functions | Assignment-1 - Paying Debt off in a Year
-# Write a program to calculate the credit card balance after one year 
+''' Functions | Assignment-1 - Paying Debt off in a Year
+# Write a program to calculate the credit card balance after one year
 #if a person only pays the minimum monthly payment required by the
-# credit card company each month.
-def payingDebtOffInAYear(balance, annual_interest_rate, monthly_payment_rate):
-    ''' Input = balance , annual_interest_rate, monthly_payment_rate
-        returns: remaning balance at the end of one year''' 
+# credit card company each month.'''
+def paying_debt_off_in_a_year(balance, annual_interest_rate, monthly_payment_rate):
+''' Input = balance , annual_interest_rate, monthly_payment_rate
+        returns:remaning balance at the end of one year''' 
     var = 1
     while var <= 12:
         monthly_interest_rate = (annual_interest_rate)/12.0
@@ -21,7 +21,7 @@ def main():
     data = input()
     data = data.split(' ')
     data = list(map(float, data))
-    print("Remaining balance:",payingDebtOffInAYear(data[0],data[1],data[2]))
+    print("Remaining balance:",paying_debt_off_in_a_year(data[0],data[1],data[2]))
 
 if __name__ == "__main__":
     main()
