@@ -9,11 +9,11 @@ def paying_debt_off_in_a_year(balance, annual_interest_rate, monthly_payment_rat
     while var <= 12:
         monthly_interest_rate = (annual_interest_rate)/12.0
         minimum_monthly_payment = (monthly_payment_rate) * balance
-        monthly_unpaid_balance = balance - minimum_monthly_payment
-        updated_balance_each_month = monthly_unpaid_balance + monthly_interest_rate*monthly_unpaid_balance
+        mnthly_unpaid_blce = balance - minimum_monthly_payment
+        updated_balance_each_month = mnthly_unpaid_blce + monthly_interest_rate*mnthly_unpaid_blce
         balance = updated_balance_each_month
         var += 1
-    return round(updated_balance_each_month,2)
+    return round(updated_balance_each_month, 2)
 
 
 def main():
