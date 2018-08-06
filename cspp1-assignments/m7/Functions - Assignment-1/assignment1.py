@@ -4,7 +4,7 @@
 # credit card company each month.'''
 def paying_debt_off_in_a_year(balance, annual_interest_rate, monthly_payment_rate):
     ''' Input = balance , annual_interest_rate, monthly_payment_rate
-        returns:remaning balance at the end year''' 
+        returns:remaning balance at the end year'''
     var = 1
     while var <= 12:
         monthly_interest_rate = (annual_interest_rate)/12.0
