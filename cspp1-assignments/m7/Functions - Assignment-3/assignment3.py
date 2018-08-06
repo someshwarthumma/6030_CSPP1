@@ -1,6 +1,6 @@
 ''' Functions - Assignment-3 - Using Bisection Search to find lowest payment Faster'''
 def paying_debt_off_in_a_year(balance, annual_interest_rate):
-    '''Input balance, annual interest 
+    '''Input balance, annual interest
     return: lowest monthly payment'''
     if balance <= 0:
         return 0
@@ -8,7 +8,7 @@ def paying_debt_off_in_a_year(balance, annual_interest_rate):
     lower_bound = balance/12
     upper_bound = (balance*(1 +monthly_rate)**12)/12
     lowest_payment = (lower_bound+upper_bound)/2
-    epsilon= 0.03
+    epsilon = 0.03
     while abs(balance) > epsilon:
         lowest_payment = (lower_bound+upper_bound)/2
         prev_bal = balance
