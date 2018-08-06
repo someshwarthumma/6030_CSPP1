@@ -3,7 +3,7 @@
 #if a person only pays the minimum monthly payment required by the
 # credit card company each month.'''
 def paying_debt_off_in_a_year(balance, annual_interest_rate, monthly_payment_rate):
-''' Input = balance , annual_interest_rate, monthly_payment_rate
+    ''' Input = balance , annual_interest_rate, monthly_payment_rate
         returns:remaning balance at the end of one year''' 
     var = 1
     while var <= 12:
