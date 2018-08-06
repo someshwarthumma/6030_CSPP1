@@ -61,7 +61,7 @@ def paying_debt_off_in_a_year(balance, annual_interest_rate):
             upper_bound= lowest_payment
         else: 
             break
-    return str(round(lowest_payment), 2)
+    return str(round(lowest_payment, 2))
 
 def main():
     data = input()
