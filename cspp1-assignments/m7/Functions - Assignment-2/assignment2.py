@@ -13,7 +13,7 @@ def paying_debt_off_in_a_year(balance, annual_interest_rate):
         while var <= 11:
             monthly_balance = prev_bal - lowest
             upd_bal = monthly_balance + monthly_rate*monthly_balance
-            prev_bal = upd_bal 
+            prev_bal = upd_bal
             var = var +1
         if monthly_balance <= 0:
             break
@@ -25,7 +25,7 @@ def main():
     data = input()
     data = data.split(' ')
     data = list(map(float, data))
-    print("Loweest Payment:", paying_debt_off_in_a_year(data[0], data[1]))
-    
+    print("Lowest Payment:", paying_debt_off_in_a_year(data[0], data[1]))
+
 if __name__ == "__main__":
     main()
