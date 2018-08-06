@@ -16,9 +16,9 @@ def paying_debt_off_in_a_year(balance, annual_interest_rate):
             upd_bal = monthly_balance + (monthly_rate*monthly_balance)
             prev_bal = upd_bal
             var = var+1
-        if (monthly_balance) > epsilon:
+        if monthly_balance>epsilon:
             lower_bound = lowest_payment
-        elif (monthly_balance) <- epsilon:
+        elif monthly_balance<-epsilon:
             upper_bound = lowest_payment
         else:
             break
@@ -30,6 +30,6 @@ def main():
     data = data.split(' ')
     data = list(map(float, data))
     print("Lowest Payment:", paying_debt_off_in_a_year(data[0], data[1]))
-    
+
 if __name__ == "__main__":
     main()
