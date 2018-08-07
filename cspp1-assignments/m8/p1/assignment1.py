@@ -14,7 +14,7 @@ def factorial(fact):
 def main():
     '''This function is used to find factorial of number using recursion'''
     fact = input()
-    print(factorial(int(fact))) 
+    print(factorial(int(fact)))
 
 if __name__ == "__main__":
     main()
