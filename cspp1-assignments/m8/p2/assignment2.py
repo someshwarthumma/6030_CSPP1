@@ -5,7 +5,7 @@ that takes in one number and returns the sum of digits of given number.
 
 def sum_of_digits(num):
     '''
-    n is positive Integer
+    num is positive Integer
     returns: a positive integer, the sum of digits of n.
     '''
     if num <= 0:
