@@ -14,9 +14,9 @@ def sum_of_digits(num):
 
 
 def main():
+    '''To find the sum of the digits in a number by recursion'''
     num = input()
     print(sum_of_digits(int(num)))
 
 if __name__ == "__main__":
     main()
-
