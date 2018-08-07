@@ -9,7 +9,7 @@ def factorial(fact):
     '''
     if fact == 0:
         return 1
-    else:
+    if fact >= 0:
         return fact*factorial(fact-1)
 def main():
     '''This function is used to find factorial of number using recursion'''
