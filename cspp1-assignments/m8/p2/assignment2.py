@@ -10,8 +10,9 @@ def sumofdigits(n):
 
     returns: a positive integer, the sum of digits of n.
     '''
-    # Your code here
-    pass
+    if n <= 0:
+    	return 0
+    return n%10+sumofdigits(n//10)
 
 
 def main():
