@@ -18,9 +18,7 @@ def get_guessed_word(secret_word, letters_guessed):
             string = string + var
         else:
             string = string + "_"
-    return string 
-    # FILL IN YOUR CODE HERE...
-    pass
+    return string
 
 def main():
     '''
