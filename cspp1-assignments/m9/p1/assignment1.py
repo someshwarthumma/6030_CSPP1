@@ -20,8 +20,7 @@ def is_word_guessed(secret_word, letters_guessed):
             flag = flag-1
     if flag == 0:
         return True
-    else:
-        return False
+    return False
 
 def main():
     '''
