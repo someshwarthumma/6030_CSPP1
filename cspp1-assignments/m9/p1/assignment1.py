@@ -14,7 +14,7 @@ def is_word_guessed(secret_word, letters_guessed):
     returns: boolean, True if all the letters of secret_word are in letters_guessed;
       False otherwise
     '''
-    flag=len(secret_word)
+    flag = len(secret_word)
     for var in secret_word:
         if var in letters_guessed:
             flag = flag-1
