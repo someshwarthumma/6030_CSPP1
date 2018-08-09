@@ -15,7 +15,7 @@ def get_available_letters(letters_guessed):
     available_letters = "abcdefghijklmnopqrstuvwxyz"
     for each_element_in_available_letter in available_letters:
         if each_element_in_available_letter in letters_guessed:
-            available_letters = available_letters.replace(each_element_in_available_letter,'')
+            available_letters = available_letters.replace(each_element_in_available_letter, '')
     return available_letters
 
 def main():
