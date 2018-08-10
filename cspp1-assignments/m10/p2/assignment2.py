@@ -110,8 +110,9 @@ def hangman(secret_word):
     Starts up an interactive game of Hangman.'''
     print("I am thinking of a word that is "+str(len(secret_word))+" letters long.")
     iterator = 8
+    flag_2 = False
     letters_guessed=[]
-    while iterator >= 1:
+    while iterator >= 1 and flag_2==False:
         print("You have "+str(iterator)+" guesses left.")
         print("Available letters: "+get_available_letters(letters_guessed))
         guess= input("Please guess a letter: ").lower()
@@ -123,11 +124,14 @@ def hangman(secret_word):
         else:
             if guess in secret_word: 
                 print("Good guess: "+get_guessed_word(secret_word, letters_guessed))
+                if get_guessed_word(secret_word, letters_guessed)==secret_word:
+                    flag_2= True
             else:
                 print("Oops! That letter is not in my word:"+get_guessed_word(secret_word, letters_guessed))
+                iterator -= 1  
         print("********************************************* ")
 
-        iterator -= 1
+        
     if get_guessed_word(secret_word, letters_guessed)==secret_word:
         print("Wow! You won the game.")
     else:
