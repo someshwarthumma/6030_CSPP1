@@ -34,9 +34,9 @@ def create_social_network(data):
     my_dict = {}
     data = data.split('\n')
     for var2 in data:
-    	var = var2.split()
+    	var = var2.split(' follows ')
     	name=var[0]
-    	for element in var[2:]:
+    	for element in var[1].split(","):
     		if name in my_dict.keys():
     			my_dict[name].append(element)
     		else:
