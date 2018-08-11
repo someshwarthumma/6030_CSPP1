@@ -35,7 +35,7 @@ def create_social_network(data):
     data = data.split('\n')
     print(data.pop())
     for var2 in data:
-    	#print(var2)
+    	print(var2)
     	var = var2.split()
     	name=var[0]
     	for element in var[2:].split(","):
