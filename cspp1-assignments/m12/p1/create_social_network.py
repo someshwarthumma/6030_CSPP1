@@ -39,7 +39,7 @@ def create_social_network(data):
 
         name, followers = element_in_data.split(" follows ")
         temp = followers.split(",")
-        prnt(temp)
+        print(temp)
         for element in temp:
             if name in my_dictionary.keys():
                 my_dictionary[name].append(element)
