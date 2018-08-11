@@ -40,10 +40,10 @@ def create_social_network(data):
         name, followers = element_in_data.split(" follows ")
         temp = followers.split(",")
         for element in temp:
-            if name in my_dict.keys():
-                my_dict[name].append(element)
+            if name in my_dictionary.keys():
+                my_dictionary[name].append(element)
             else:
-                my_dict[name] = [element]
+                my_dictionary[name] = [element]
     print(my_dict)
 
 def main():
