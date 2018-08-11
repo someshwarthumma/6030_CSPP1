@@ -33,10 +33,12 @@ def create_social_network(data):
     '''
     my_dict = {}
     data = data.split('\n')
+    print(data.pop())
     for var2 in data:
-    	var = var2.split(' follows ')
+    	#print(var2)
+    	var = var2.split()
     	name=var[0]
-    	for element in var[1].split(","):
+    	for element in var[2:].split(","):
     		if name in my_dict.keys():
     			my_dict[name].append(element)
     		else:
@@ -47,7 +49,7 @@ def create_social_network(data):
     
 
     # remove the pass below and start writing your code
-    pass
+    #pass
 
 def main():
     '''
