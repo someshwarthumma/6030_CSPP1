@@ -34,6 +34,7 @@ def create_social_network(data):
     my_dict = {}
     data = data.split('\n')
     data=data[0:len(data)-1:1]
+    print(data)
     for var2 in data:
     	var = var2.split()
     	name=var[0]
