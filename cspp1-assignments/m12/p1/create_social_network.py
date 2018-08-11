@@ -32,7 +32,7 @@ def create_social_network(data):
         Empty dictionary is not None, it is a dictionary with no keys
     '''
     my_dict = {}
-    data = data.split('\n')    	
+    data = data.split('\n')   	
     data=data[0:len(data)-1:1]
     for var2 in data:
     	name, var = var2.split(" follows ")
