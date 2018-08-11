@@ -43,7 +43,7 @@ def create_social_network(data):
             else:
                 my_dict[name] = [element]
     print(my_dict)
-    
+
 def main():
     '''
         handling testcase input and printing output
@@ -55,7 +55,6 @@ def main():
         i += 1
         string += input()
         string += '\n'
-        
 
     print(create_social_network(string))
 
