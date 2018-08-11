@@ -120,7 +120,7 @@ def hangman(secret_word):
         if flag!=True:
             letters_guessed.append(guess)
         if flag:
-            print("Oops! You've already guessed that letter: "+get_available_letters(letters_guessed))
+            print("Oops! You've already guessed that letter: "+get_guessed_word(secret_word, letters_guessed))
         else:
             if guess in secret_word: 
                 print("Good guess: "+get_guessed_word(secret_word, letters_guessed))
