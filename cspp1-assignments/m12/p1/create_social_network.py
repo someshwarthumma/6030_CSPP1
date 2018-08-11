@@ -43,7 +43,7 @@ def create_social_network(data):
                 my_dictionary[name].append(element)
             else:
                 my_dictionary[name] = [element]
-    print(my_dictionary)
+    return my_dictionary
 
 def main():
     '''
