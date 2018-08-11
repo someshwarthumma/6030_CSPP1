@@ -36,6 +36,8 @@ def create_social_network(data):
     data=data[0:len(data)-1:1]
     for var2 in data:
     	name, var = var2.split(" follows ")
+    	if name == ""
+    		print("EDR")
     	k=var.split(",")
     	k.pop()
     	for element in k:
