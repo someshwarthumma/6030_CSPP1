@@ -33,7 +33,7 @@ def create_social_network(data):
     '''
     my_dict = {}
     data = data.split('\n')
-    data.pop()
+    data=data[0:len(data)-1:1]
     for var2 in data:
     	var = var2.split()
     	name=var[0]
