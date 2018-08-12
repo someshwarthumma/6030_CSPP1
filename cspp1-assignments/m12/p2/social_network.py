@@ -28,10 +28,8 @@ def unfollow(network, arg1, arg2):
         unfollow function is called when arg1 wants to stop following arg2
         so, this should result in removing arg2 from the followers list of arg1
         update the network dictionary and return it
-    '''
-    # remove the pass below and start writing your code
-    pass
-
+    '''return network
+    
 def delete_person(network, arg1):
     '''
         2 arguments are passed to this function
@@ -42,9 +40,7 @@ def delete_person(network, arg1):
         also, before deleting arg1, remove arg1 from the everyone's followers list
         update the network dictionary and return it
     '''
-    # remove the pass below and start writing your code
-    pass
-
+    return network
 def main():
     '''
         handling testcase input and printing output
