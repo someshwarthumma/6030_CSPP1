@@ -14,6 +14,8 @@ def follow(network, arg1, arg2):
         update the network dictionary and return it
     '''
     print(network)
+    print(arg1)
+    print(arg2)
     if arg2 in network.keys():
         network[arg2].append(arg1)
     else:
