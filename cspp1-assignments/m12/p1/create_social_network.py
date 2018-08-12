@@ -35,7 +35,7 @@ def create_social_network(data):
 
     data = data.split('\n')
     data.pop()
-    if len(data)==1:
+    if len(data) == 1:
         return my_dictionary
     for element_in_data in data:
         name, followers = element_in_data.split(" follows ")
