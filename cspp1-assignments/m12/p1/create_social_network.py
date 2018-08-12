@@ -32,6 +32,8 @@ def create_social_network(data):
         Empty dictionary is not None, it is a dictionary with no keys
     '''
     my_dictionary = {}
+    print(data)
+
     data = data.split('\n')
     data.pop()
     for element_in_data in data:
