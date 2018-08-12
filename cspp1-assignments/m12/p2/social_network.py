@@ -29,7 +29,7 @@ def unfollow(network, arg1, arg2):
         so, this should result in removing arg2 from the followers list of arg1
         update the network dictionary and return it
     '''
-    if arg1 in network.keys()
+    if arg1 in network.keys():
         network[arg1]=network[arg1].remove(arg2)
     return network
     
