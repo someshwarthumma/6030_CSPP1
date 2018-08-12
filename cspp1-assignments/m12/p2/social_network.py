@@ -10,11 +10,14 @@ def follow(network, arg1, arg2):
         network is a dictionary representing the social network
         arg1 and arg2 are two people in the network
         follow function is called when arg1 wants to follows arg2
-        so, this should result in adding arg2 to the followers list of arg1
+        so, this shoulnd result in adding arg2 to the followers list of arg1
         update the network dictionary and return it
     '''
-    # remove the pass below and start writing your code
-    pass
+    if arg2 in network.keys():
+        network[arg2] = network[arg2].append(arg1)
+    else:
+        network[arg2]=[arg1]
+    return network
 
 def unfollow(network, arg1, arg2):
     '''
