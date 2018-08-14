@@ -32,12 +32,8 @@ def is_straight(hand):
     temp.sort()
 
     for i in range(len(temp)-1):
-        a = int(temp[i])
-        b = int(temp[i+1])
-        #print(a,b)
-        if b-a == 1:
-            #print("yeah")
-            pass   
+        if int(temp[i+1])-int(temp[i]) == 1:
+            pass
         else:
             return False
     return True
@@ -117,7 +113,7 @@ def poker(hands):
     # hand_rank takes a hand and returns its rank
     # max uses the rank returned by hand_rank and returns the best hand
     #print(key=hand_rank)
-    return max(hands, key = hand_rank)
+    return max(hands, key=hand_rank)
 
 if __name__ == "__main__":
     # read the number of test cases
