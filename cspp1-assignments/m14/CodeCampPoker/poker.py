@@ -16,15 +16,15 @@ def is_straight(hand):
     '''
     #size=[2,3,4,5,6,7,8,9,10,11,12,13]
     
-    temp=[]
+    temp = []
     for i in hand:
-        if i[0]=='J':
+        if i[0] =='J':
             temp.append(11)
-        elif i[0]=='Q':
+        elif i[0] == 'Q':
             temp.append(12)
-        elif i[0]=='K':
+        elif i[0] == 'K':
             temp.append(13)
-        elif i[0]=='A':
+        elif i[0] == 'A':
             temp.append(14)
         elif i[0] == 'T':
             temp.append(10)
@@ -34,10 +34,10 @@ def is_straight(hand):
     temp.sort()
     
     for i in range(len(temp)-1):
-        a=int(temp[i])
-        b=int(temp[i+1])
+        a = int(temp[i])
+        b = int(temp[i+1])
         #print(a,b)
-        if b-a ==1:
+        if b-a == 1:
             #print("yeah")
             pass
             
@@ -56,9 +56,9 @@ def is_flush(hand):
         Write the code for it and return True if it is a flush else return False
     '''
     for i  in range(len(hand)-1):
-        card1=hand[i]
-        card2=hand[i+1]
-        if card1[1]!=card2[1]:
+        card1 = hand[i]
+        card2 = hand[i+1]
+        if card1[1] != card2[1]:
             return False
         else:
             pass
@@ -121,7 +121,7 @@ def poker(hands):
     # hand_rank takes a hand and returns its rank
     # max uses the rank returned by hand_rank and returns the best hand
     #print(key=hand_rank)
-    return max(hands, key=hand_rank)
+    return max(hands, key = hand_rank)
 
 if __name__ == "__main__":
     # read the number of test cases
