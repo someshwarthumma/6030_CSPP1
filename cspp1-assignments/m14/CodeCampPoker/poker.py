@@ -15,29 +15,35 @@ def is_straight(hand):
         Write the code for it and return True if it is a straight else return False
     '''
     #size=[2,3,4,5,6,7,8,9,10,11,12,13]
+    
     temp=[]
     for i in hand:
-    	if i[0]=='J':
-    		temp.append(11)
-    	elif i[0]=='Q':
-    		temp.append(12)
-    	elif i[0]=='K':
-    		temp.append(13)
-    	elif i[0]=='A':
-    		temp.append(14)
-    	elif i[0] == 'T':
-    		temp.append(10)
-    	else:
-    		temp.append(int(i[0]))
-    VALUE = sorted(temp)
-    print(VALUE)
+        if i[0]=='J':
+            temp.append(11)
+        elif i[0]=='Q':
+            temp.append(12)
+        elif i[0]=='K':
+            temp.append(13)
+        elif i[0]=='A':
+            temp.append(14)
+        elif i[0] == 'T':
+            temp.append(10)
+        else:
+            temp.append(int(i[0]))
+
+    temp.sort()
+    
     for i in range(len(temp)-1):
-    	a=int(temp[i])
-    	b=int(temp[i+1])
-    	if b-a ==1:
-    		pass
-    	else:
-    		return False
+        a=int(temp[i])
+        b=int(temp[i+1])
+        #print(a,b)
+        if b-a ==1:
+            #print("yeah")
+            pass
+            
+        else:
+            return False
+    
     return True
 
 def is_flush(hand):
@@ -50,12 +56,12 @@ def is_flush(hand):
         Write the code for it and return True if it is a flush else return False
     '''
     for i  in range(len(hand)-1):
-    	card1=hand[i]
-    	card2=hand[i+1]
-    	if card1[1]!=card2[1]:
-    		return False
-    	else:
-    		pass
+        card1=hand[i]
+        card2=hand[i+1]
+        if card1[1]!=card2[1]:
+            return False
+        else:
+            pass
     return True
 
 def hand_rank(hand):
@@ -66,18 +72,18 @@ def hand_rank(hand):
         The first version should identify if the given hand is a straight
         or a flush or a straight flush.
     '''
-    print(hand)
+    #print(hand)
     if is_flush(hand) and is_straight(hand):
-    	print("Flush&&straight")
-    	return 3
+        #print("Flush&&straight")
+        return 3
     elif is_flush(hand):
-    	print("Flush")
-    	return 2
+        #print("Flush")
+        return 2
     elif is_straight(hand):
-    	print("straight")
-    	return 1
+        #print("straight")
+        return 1
     else:
-    	return 0
+        return 0
 
     # By now you should have seen the way a card is represented.
     # If you haven't then go the main or poker function and print the hands
@@ -94,7 +100,7 @@ def hand_rank(hand):
     # third would be a straight with the return value 1
     # any other hand would be the fourth best with the return value 0
     # max in poker function uses these return values to select the best hand
-    return 1
+    #return 1
 
 def poker(hands):
     '''
