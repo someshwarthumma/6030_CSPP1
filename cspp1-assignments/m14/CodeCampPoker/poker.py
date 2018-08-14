@@ -64,7 +64,7 @@ def hand_rank(hand):
     '''
     if is_flush(hand) and is_straight(hand):
         return 3
-    else:
+    elif is_flush(hand):
         return 2
     elif is_straight(hand):
         return 1
