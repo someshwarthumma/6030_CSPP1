@@ -64,15 +64,11 @@ def hand_rank(hand):
         The first version should identify if the given hand is a straight
         or a flush or a straight flush.
     '''
-    #print(hand)
     if is_flush(hand) and is_straight(hand):
-        #print("Flush&&straight")
         return 3
     elif is_flush(hand):
-        #print("Flush")
         return 2
     elif is_straight(hand):
-        #print("straight")
         return 1
     else:
         return 0
