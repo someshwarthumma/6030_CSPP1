@@ -52,7 +52,6 @@ def is_flush(hand):
         card2 = hand[i+1]
         if card1[1] != card2[1]:
             return False
-        pass
     return True
 
 def hand_rank(hand):
