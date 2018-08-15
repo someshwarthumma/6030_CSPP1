@@ -85,7 +85,7 @@ def is_straight(hand):
         Think of an algorithm: given the card face value how to check if it a straight
         Write the code for it and return True if it is a straight else return False
     '''
-   
+
     temp = sorted(face_value_only(hand))
     for i in range(len(temp)-1):
         if int(temp[i+1])-int(temp[i]) == 1:
