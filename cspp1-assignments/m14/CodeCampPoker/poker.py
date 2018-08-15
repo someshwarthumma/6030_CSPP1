@@ -25,7 +25,10 @@ def face_value_only(hand):
     return temp
 
 def is_full_house(hand):
-    sorted_list=sorted(face_value_only(hand))
+    '''
+    To check weather given hand is full house or not
+    '''
+    sorted_list = sorted(face_value_only(hand))
     if sorted_list[0] == sorted_list[1] == sorted_list[2]:
         if sorted_list[3] == sorted_list[4]:
             return True
@@ -35,19 +38,28 @@ def is_full_house(hand):
     return False
 
 def is_three_of_a_kind(hand):
-    sorted_list=sorted(face_value_only(hand))
+    '''
+    To check weather the given hand is three of a kind or not
+    '''
+    sorted_list = sorted(face_value_only(hand))
     for i in range(len(sorted_list)-2):
         if sorted_list[i] == sorted_list[i+1] == sorted_list[i+2]:
             return True
     return False
 
 def is_two_pair(hand):
-    sorted_list=sorted(face_value_only(hand))
-    if len(set(sorted_list))==3:
+    '''
+    To check for Two  pair in hand
+    '''
+    sorted_list = sorted(face_value_only(hand))
+    if len(set(sorted_list)) == 3:
         return True
     return False
 
 def is_one_pair(hand):
+    '''
+    To check for a pair n a hand
+    '''
     sorted_list = sorted(face_value_only(hand))
     if len(set(sorted_list)) == 4:
         return True
@@ -73,23 +85,21 @@ def is_straight(hand):
         Think of an algorithm: given the card face value how to check if it a straight
         Write the code for it and return True if it is a straight else return False
     '''
-    temp = []
-    for i in hand:
-        if i[0] == 'J':
-            temp.append(11)
-        elif i[0] == 'Q':
-            temp.append(12)
-        elif i[0] == 'K':
-            temp.append(13)
-        elif i[0] == 'A':
-            temp.append(14)
-        elif i[0] == 'T':
-            temp.append(10)
-        else:
-            temp.append(int(i[0]))
-
-    temp.sort()
-
+    # temp = []
+    # for i in hand:
+    #     if i[0] == 'J':
+    #         temp.append(11)
+    #     elif i[0] == 'Q':
+    #         temp.append(12)
+    #     elif i[0] == 'K':
+    #         temp.append(13)
+    #     elif i[0] == 'A':
+    #         temp.append(14)
+    #     elif i[0] == 'T':
+    #         temp.append(10)
+    #     else:
+    #         temp.append(int(i[0]))
+    temp = sorted(face_value_only(hand))
     for i in range(len(temp)-1):
         if int(temp[i+1])-int(temp[i]) == 1:
             pass
