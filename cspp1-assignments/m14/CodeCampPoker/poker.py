@@ -3,6 +3,67 @@
     Read about poker hands here.
     https://en.wikipedia.org/wiki/List_of_poker_hands
 '''
+def face_value_only(hand):
+	'''
+	To get only the face values of a given card
+	'''
+	temp = []
+    for i in hand:
+        if i[0] == 'J':
+            temp.append(11)
+        elif i[0] == 'Q':
+            temp.append(12)
+        elif i[0] == 'K':
+            temp.append(13)
+        elif i[0] == 'A':
+            temp.append(14)
+        elif i[0] == 'T':
+            temp.append(10)
+        else:
+            temp.append(int(i[0]))
+
+    return temp
+
+def is_full_house(hand):
+	sorted_list=sorted(face_value_only(hand))
+	flag == 0
+	if sorted_list[0] == sorted_list[1] == sorted_list[2]:
+		if sorted_list[3] == sorted_list[4]:
+			return True
+	if sorted_list[0] == sorted_list[1]:
+		if sorted_list[2] == sorted_list[3] == sorted_list[4]:
+			return True
+	return False
+
+def is_three_of_a_kind(hand):
+	sorted_list=sorted(face_value_only(hand))
+	flag == 0
+	for i in range(len(sorted_list)-2)
+		if sorted_list[i] == sorted_list[i+1] == sorted_list[i+2]:
+			return True
+	return False
+
+def is_two_pair(hand):
+	sorted_list=sorted(face_value_only(hand))
+	if len(set(sorted_list))==3:
+		return True
+	return False
+
+def is_one_pair(hand):
+	sorted_list = sorted(face_value_only(hand))
+	if len(set(sorted_list)) == 4:
+		return True
+	return False
+
+def is_four_of_a_kind(hand):
+	'''
+	To check the given hand four of a kind
+	'''
+	sorted_list = sorted(face_value_only(hand))
+	for i in range(len(sorted_list)-3):
+		if sorted_list[i] == sorted_list[i+1] == sorted_list[i+2] == sorted_list[i+3]:
+			return True
+	return False
 
 def is_straight(hand):
     '''
@@ -62,13 +123,24 @@ def hand_rank(hand):
         The first version should identify if the given hand is a straight
         or a flush or a straight flush.
     '''
+
     if is_flush(hand) and is_straight(hand):
-        return 3
+        return 9
+    if is_four_of_a_kind(hand):
+    	return 8
+    if is_full_house(hand):
+    	return 7
     if is_flush(hand):
-        return 2
+        return 6
     if is_straight(hand):
-        return 1
-    return 0
+        return 5
+    if is_three_of_a_kind(hand):
+    	return 4
+    if is_two_pair(hand):
+    	return 3
+    if is_one_pair(hand):
+    	return 2
+    return 1
 
     # By now you should have seen the way a card is represented.
     # If you haven't then go the main or poker function and print the hands
