@@ -26,7 +26,6 @@ def face_value_only(hand):
 
 def is_full_house(hand):
     sorted_list=sorted(face_value_only(hand))
-    flag == 0
     if sorted_list[0] == sorted_list[1] == sorted_list[2]:
         if sorted_list[3] == sorted_list[4]:
             return True
@@ -37,7 +36,6 @@ def is_full_house(hand):
 
 def is_three_of_a_kind(hand):
     sorted_list=sorted(face_value_only(hand))
-    flag == 0
     for i in range(len(sorted_list)-2):
         if sorted_list[i] == sorted_list[i+1] == sorted_list[i+2]:
             return True
