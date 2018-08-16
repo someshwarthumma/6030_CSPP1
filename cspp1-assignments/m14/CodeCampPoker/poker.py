@@ -25,10 +25,13 @@ def face_value_only(hand):
     return temp
 
 def duplicate_pair(hand):
-    temp=[]
+    '''
+    To get the highest rank card in a one pair
+    '''
+    temp = []
     sorted_list = sorted(face_value_only(hand))
     for i in sorted_list:
-        if sorted_list.count(i)==2:
+        if sorted_list.count(i) == 2:
             temp.append(i)
     if not temp:
         return False
