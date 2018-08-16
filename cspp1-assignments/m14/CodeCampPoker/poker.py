@@ -135,9 +135,9 @@ def hand_rank(hand):
         return 3
     if is_one_pair(hand):
         return 2
-    return max(set(sorted(face_value_only(hand))))
-    # if is_high_card(hand):
-    #     return 1
+    #return max(set(sorted(face_value_only(hand))))
+    if is_high_card(hand):
+        return 1
 
     # By now you should have seen the way a card is represented.
     # If you haven't then go the main or poker function and print the hands
