@@ -30,7 +30,9 @@ def duplicate_pair(hand):
     for i in sorted_list:
         if sorted_list.count(i)==0:
             temp.append(i)
-    return (max(temp)/100)+1
+    if not temp:
+        return False
+    return (max(temp)/100)+2
 
 
 def high_card(hand):
