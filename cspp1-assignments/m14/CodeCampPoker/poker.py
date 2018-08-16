@@ -24,6 +24,12 @@ def face_value_only(hand):
 
     return temp
 
+def duplicate_pair(hand):
+    sorted_list = sorted(face_value_only(hand))
+    for i in range(sorted_list):
+        if count()
+
+
 def high_card(hand):
     temp = []
     for i in hand:
@@ -152,7 +158,7 @@ def hand_rank(hand):
     if is_two_pair(hand):
         return 3
     if is_one_pair(hand):
-        high_one_pair(hand)
+        #return max(duplicate_pair(hand))
         return 2
     return high_card(hand)
 
