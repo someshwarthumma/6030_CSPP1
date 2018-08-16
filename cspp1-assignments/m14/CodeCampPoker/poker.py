@@ -98,7 +98,7 @@ def is_one_pair(hand):
     temp=[]
     sorted_list = sorted(face_value_only(hand))
     for i in sorted_list:
-        if sorted_list.count(i)==0:
+        if sorted_list.count(i)==2:
             temp.append(i)
     if not temp:
         return False
