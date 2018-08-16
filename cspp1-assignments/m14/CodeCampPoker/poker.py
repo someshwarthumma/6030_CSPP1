@@ -24,6 +24,24 @@ def face_value_only(hand):
 
     return temp
 
+ def high_card(hand):
+    temp = []
+    for i in hand:
+        if i[0] == 'J':
+            temp.append(1.1)
+        elif i[0] == 'Q':
+            temp.append(1.2)
+        elif i[0] == 'K':
+            temp.append(1.3)
+        elif i[0] == 'A':
+            temp.append(1.4)
+        elif i[0] == 'T':
+            temp.append(1.0)
+        else:
+            temp.append(int(i[0]/10))
+    temp = sorted(temp)
+    return max(set(temp))
+
 def is_full_house(hand):
     '''
     To check weather given hand is full house or not
@@ -135,9 +153,7 @@ def hand_rank(hand):
         return 3
     if is_one_pair(hand):
         return 2
-    #return max(set(sorted(face_value_only(hand))))
-    #if is_high_card(hand):
-    return 1
+    return high_card(hand)
 
     # By now you should have seen the way a card is represented.
     # If you haven't then go the main or poker function and print the hands
