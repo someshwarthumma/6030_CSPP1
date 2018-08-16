@@ -65,8 +65,6 @@ def is_one_pair(hand):
         return True
     return False
 
-def is_high_card(hand):
-
 def is_four_of_a_kind(hand):
     '''
     To check the given hand four of a kind
