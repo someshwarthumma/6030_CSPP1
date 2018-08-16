@@ -23,14 +23,20 @@ def face_value_only(hand):
             temp.append(int(i[0]))
 
     return temp
-'''
+
 def duplicate_pair(hand):
+    temp=[]
     sorted_list = sorted(face_value_only(hand))
-    for i in range(sorted_list):
-        if count()
-'''
+    for i in sorted_list:
+        if sorted_list.count(i)==0:
+            temp.append(i)
+    return (max(new)/100)+1
+
 
 def high_card(hand):
+    '''
+    To find the high card
+    '''
     temp = []
     for i in hand:
         if i[0] == 'J':
@@ -45,7 +51,6 @@ def high_card(hand):
             temp.append(float(1.0))
         else:
             temp.append(int(i[0])/int(10))
-    temp = sorted(temp)
     return max(set(temp))
 
 def is_full_house(hand):
@@ -158,8 +163,8 @@ def hand_rank(hand):
     if is_two_pair(hand):
         return 3
     if is_one_pair(hand):
-        #return max(duplicate_pair(hand))
-        return 2
+        return duplicate_pair(hand)
+        #return 2
     return high_card(hand)
 
     # By now you should have seen the way a card is represented.
