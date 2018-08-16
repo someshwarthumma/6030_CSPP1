@@ -65,6 +65,8 @@ def is_one_pair(hand):
         return True
     return False
 
+def is_high_card(hand):
+
 def is_four_of_a_kind(hand):
     '''
     To check the given hand four of a kind
@@ -135,7 +137,9 @@ def hand_rank(hand):
         return 3
     if is_one_pair(hand):
         return 2
-    return 1
+    return max(set(sorted(face_value_only(hand))))
+    # if is_high_card(hand):
+    #     return 1
 
     # By now you should have seen the way a card is represented.
     # If you haven't then go the main or poker function and print the hands
