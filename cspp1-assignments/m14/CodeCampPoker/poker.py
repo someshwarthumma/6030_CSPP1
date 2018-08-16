@@ -24,15 +24,15 @@ def face_value_only(hand):
 
     return temp
 
-def duplicate_pair(hand):
-    temp=[]
-    sorted_list = sorted(face_value_only(hand))
-    for i in sorted_list:
-        if sorted_list.count(i)==0:
-            temp.append(i)
-    if not temp:
-        return False
-    return (max(temp)/100)+2
+# def duplicate_pair(hand):
+#     temp=[]
+#     sorted_list = sorted(face_value_only(hand))
+#     for i in sorted_list:
+#         if sorted_list.count(i)==0:
+#             temp.append(i)
+#     if not temp:
+#         return False
+#     return (max(temp)/100)+2
 
 
 def high_card(hand):
@@ -91,11 +91,18 @@ def is_one_pair(hand):
     '''
     To check for a pair n a hand
     '''
+    # sorted_list = sorted(face_value_only(hand))
+    # if len(set(sorted_list)) == 4:
+    #     return True
+    # return False
+    temp=[]
     sorted_list = sorted(face_value_only(hand))
-    if len(set(sorted_list)) == 4:
-        return True
-    return False
-
+    for i in sorted_list:
+        if sorted_list.count(i)==0:
+            temp.append(i)
+    if not temp:
+        return False
+    return (max(temp)/100)+2
 def is_four_of_a_kind(hand):
     '''
     To check the given hand four of a kind
@@ -165,7 +172,7 @@ def hand_rank(hand):
     if is_two_pair(hand):
         return 3
     if is_one_pair(hand):
-        return duplicate_pair(hand)
+        return is_one_pair(hand)
         #return 2
     return high_card(hand)
 
