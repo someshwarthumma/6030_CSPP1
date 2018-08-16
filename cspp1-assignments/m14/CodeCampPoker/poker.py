@@ -23,12 +23,12 @@ def face_value_only(hand):
             temp.append(int(i[0]))
 
     return temp
-
+'''
 def duplicate_pair(hand):
     sorted_list = sorted(face_value_only(hand))
     for i in range(sorted_list):
         if count()
-
+'''
 
 def high_card(hand):
     temp = []
