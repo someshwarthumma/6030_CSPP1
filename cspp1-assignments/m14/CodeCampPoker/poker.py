@@ -28,17 +28,17 @@ def high_card(hand):
     temp = []
     for i in hand:
         if i[0] == 'J':
-            temp.append(1.1)
+            temp.append(float(1.1))
         elif i[0] == 'Q':
-            temp.append(1.2)
+            temp.append(float(1.2))
         elif i[0] == 'K':
-            temp.append(1.3)
+            temp.append(float(1.3))
         elif i[0] == 'A':
-            temp.append(1.4)
+            temp.append(float(1.4))
         elif i[0] == 'T':
-            temp.append(1.0)
+            temp.append(float(1.0))
         else:
-            temp.append(int(i[0]/10))
+            temp.append(int(i[0])/int(10))
     temp = sorted(temp)
     return max(set(temp))
 
