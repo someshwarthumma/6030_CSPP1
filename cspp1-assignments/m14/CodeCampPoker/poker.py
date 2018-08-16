@@ -24,7 +24,7 @@ def face_value_only(hand):
 
     return temp
 
- def high_card(hand):
+def high_card(hand):
     temp = []
     for i in hand:
         if i[0] == 'J':
