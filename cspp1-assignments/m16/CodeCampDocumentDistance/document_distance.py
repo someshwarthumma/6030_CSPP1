@@ -22,7 +22,7 @@ def similarity(dict1, dict2):
     	term1 = term1 + i[0]**2
     	term2 = term2 + i[1]**2
     distance = sum1/(math.sqrt(term1)*math.sqrt(term2))
-    print(distance)
+    #print(distance)
     return distance
 
 def load_stopwords(filename):
