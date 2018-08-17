@@ -13,16 +13,16 @@ def similarity(dict1, dict2):
             keys.remove(word)
     #print(keys)
     for i in keys:
-        dictionary[i] = [0,0]
+        dictionary[i] = [0, 0]
     for i in dict1.keys():
         dictionary[i][0] = dict1[i]
     for i in dict2.keys():
         dictionary[i][1] = dict2[i]
-    sum1=0
+    sum1 = 0
     term1 = 0
     term2 = 0
     for i in dictionary.values():
-        sum1  = sum1 + i[0]*i[1]
+        sum1 = sum1 + i[0]*i[1]
         term1 = term1 + i[0]**2
         term2 = term2 + i[1]**2
     distance = sum1/(math.sqrt(term1)*math.sqrt(term2))
@@ -45,7 +45,7 @@ def clean_up_words(input_file):
     '''
     for i in input_file:
         if i in "!@$%^&*()_-+=<>?/.,:;|'~`1234567890":
-            input_file=input_file.replace(i, '')
+            input_file = input_file.replace(i, '')
     input_file = input_file.lower()
     input_file = input_file.split()
     if '' in input_file:
