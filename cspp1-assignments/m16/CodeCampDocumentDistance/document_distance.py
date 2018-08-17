@@ -41,12 +41,15 @@ def clean_up_words(input_file):
             input_file=input_file.replace(i, '')
     input_file = input_file.lower()
     input_file = input_file.split()
+    print(input_file)
     if '' in input_file:
         input_file.remove('')
+    print(input_file)
     return input_file
 
 def remove_stopwords(input_list, filename):
-    for i in input_list:
+    temp = input_list[:]
+    for i in temp:
         if i in filename:
             input_list.remove(i)
     return input_list
