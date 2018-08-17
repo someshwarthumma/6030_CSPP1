@@ -9,9 +9,8 @@ def similarity(dict1, dict2):
     dictionary = {}
     keys = set(list(dict1.keys()) + list(dict2.keys()))
     for word in keys:
-        if len(word) == 0:
+        if not in word:
             keys.remove(word)
-    #print(keys)
     for i in keys:
         dictionary[i] = [0, 0]
     for i in dict1.keys():
@@ -26,7 +25,6 @@ def similarity(dict1, dict2):
         term1 = term1 + i[0]**2
         term2 = term2 + i[1]**2
     distance = sum1/(math.sqrt(term1)*math.sqrt(term2))
-    #print(distance)
     return distance
 
 def load_stopwords(filename):
