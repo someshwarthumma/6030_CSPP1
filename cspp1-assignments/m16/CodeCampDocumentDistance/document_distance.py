@@ -9,7 +9,7 @@ def similarity(dict1, dict2):
     dictionary = {}
     keys = set(list(dict1.keys()) + list(dict2.keys()))
     for word in keys:
-        if not in word:
+        if not word:
             keys.remove(word)
     for i in keys:
         dictionary[i] = [0, 0]
