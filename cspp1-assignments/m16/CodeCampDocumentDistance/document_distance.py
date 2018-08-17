@@ -37,7 +37,7 @@ def load_stopwords(filename):
 
 def clean_up_words(input_file):
 	for i in input_file:
-		if i in "!@$%^&*()_-+=<>?/.,:;{[}]|~`":
+		if i in "!@$%^&*()_-+=<>?/.,:;{[}]|'~`1234567890":
 			input_file=input_file.replace(i, '')
 	input_file = input_file.lower()
 	input_file = input_file.split()
