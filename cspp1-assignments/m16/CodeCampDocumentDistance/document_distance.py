@@ -11,7 +11,7 @@ def similarity(dict1, dict2):
     for word in keys:
         if len(word)==0:
             keys.remove(word)
-    print(keys)
+    #print(keys)
     for i in keys:
         dictionary[i]=[0,0]
     for i in dict1.keys():
