@@ -8,6 +8,10 @@ def similarity(dict1, dict2):
     '''
     dictionary={}
     keys = set(list(dict1.keys())+list(dict2.keys()))
+    for word in keys:
+        if len(word)==0:
+            keys.remove(word)
+    print(keys)
     for i in keys:
         dictionary[i]=[0,0]
     for i in dict1.keys():
@@ -37,8 +41,9 @@ def load_stopwords(filename):
 
 def clean_up_words(input_file):
     for i in input_file:
-        if i in "!@$%^&*()_-+=<>?/.,:;{[}]|'~`1234567890":
+        if i in "!@$%^&*()_-+=<>?/.,:;|'~`1234567890":
             input_file=input_file.replace(i, '')
+    #print(input_file)
     input_file = input_file.lower()
     input_file = input_file.split()
     #print(input_file)
@@ -52,6 +57,7 @@ def remove_stopwords(input_list, filename):
     for i in temp:
         if i in filename:
             input_list.remove(i)
+    #print(input_list)
     return input_list
 def word_freq(input_list):
     dictionary = {}
