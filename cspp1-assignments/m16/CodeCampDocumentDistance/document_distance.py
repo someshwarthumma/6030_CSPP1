@@ -19,8 +19,8 @@ def similarity(dict1, dict2):
     for i in dict2.keys():
         dictionary[i][1] = dict2[i]
     sum1=0
-    term1 = 1
-    term2 = 1
+    term1 = 0
+    term2 = 0
     for i in dictionary.values():
         sum1  = sum1 + i[0]*i[1]
         term1 = term1 + i[0]**2
@@ -74,9 +74,12 @@ def main():
     input2 = input()
     filename = load_stopwords('stopwords.txt')
     list1 = clean_up_words(input1)
+    #print(list1)
     list2 = clean_up_words(input2)
     list1_without_stopword = remove_stopwords(list1, filename)
     list2_without_stopword = remove_stopwords(list2, filename)
+    print(list1_without_stopword)
+    print(list2_without_stopword)
     dict1 = word_freq(list1_without_stopword)
     dict2 = word_freq(list2_without_stopword)
     print(similarity(dict1, dict2))
