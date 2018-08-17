@@ -6,14 +6,14 @@ def similarity(dict1, dict2):
     '''
         Compute the document distance as given in the PDF
     '''
-    dictionary={}
-    keys = set(list(dict1.keys())+list(dict2.keys()))
+    dictionary = {}
+    keys = set(list(dict1.keys()) + list(dict2.keys()))
     for word in keys:
-        if len(word)==0:
+        if len(word) == 0:
             keys.remove(word)
     #print(keys)
     for i in keys:
-        dictionary[i]=[0,0]
+        dictionary[i] = [0,0]
     for i in dict1.keys():
         dictionary[i][0] = dict1[i]
     for i in dict2.keys():
@@ -40,30 +40,35 @@ def load_stopwords(filename):
     return stopwords
 
 def clean_up_words(input_file):
+    '''
+    To clean up the words from the given input file
+    '''
     for i in input_file:
         if i in "!@$%^&*()_-+=<>?/.,:;|'~`1234567890":
             input_file=input_file.replace(i, '')
-    #print(input_file)
     input_file = input_file.lower()
     input_file = input_file.split()
-    #print(input_file)
     if '' in input_file:
         input_file.remove('')
-    #print(input_file)
     return input_file
 
 def remove_stopwords(input_list, filename):
+    '''
+    To remove stopwords from the given inputs
+    '''
     temp = input_list[:]
     for i in temp:
         if i in filename:
             input_list.remove(i)
-    #print(input_list)
     return input_list
 def word_freq(input_list):
+    '''
+    To find the word frequency from a input list
+    '''
     dictionary = {}
     for i in input_list:
         if i not in dictionary.keys():
-            dictionary[i]=input_list.count(i)
+            dictionary[i] = input_list.count(i)
     return dictionary
 
 def main():
@@ -74,12 +79,9 @@ def main():
     input2 = input()
     filename = load_stopwords('stopwords.txt')
     list1 = clean_up_words(input1)
-    #print(list1)
     list2 = clean_up_words(input2)
     list1_without_stopword = remove_stopwords(list1, filename)
     list2_without_stopword = remove_stopwords(list2, filename)
-    # print(list1_without_stopword)
-    # print(list2_without_stopword)
     dict1 = word_freq(list1_without_stopword)
     dict2 = word_freq(list2_without_stopword)
     print(similarity(dict1, dict2))
