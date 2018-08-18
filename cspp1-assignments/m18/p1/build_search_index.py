@@ -26,6 +26,7 @@ def load_stopwords(filename):
     '''
         loads stop words from a file and returns a dictionary
     '''
+
     stopwords = {}
     with open(filename, 'r') as f_stopwords:
         for line in f_stopwords:
@@ -80,9 +81,9 @@ def build_search_index(docs):
         for word in line:
             if word in wordlist:
                 if word not in dictionary:
-                    k = line.count(word)
-                    t = (index, k)
-                    dictionary[word] = [t]
+                    count_ = line.count(word)
+                    temp = (index, count_)
+                    dictionary[word] = [temp]
                 else:
                     count_ = line.count(word)
                     temp = (index, count_)
@@ -104,7 +105,6 @@ def build_search_index(docs):
 
     # return search index
 '''
-    
 #helper function to print the search index
 # use this to verify how the search index looks
 
