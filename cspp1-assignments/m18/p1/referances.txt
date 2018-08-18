@@ -1,0 +1,2 @@
+https://2017.pygotham.org/talks/indexing-all-the-things-building-your-search-engine-in-python/
+https://qbox.io/blog/building-an-elasticsearch-index-with-python
