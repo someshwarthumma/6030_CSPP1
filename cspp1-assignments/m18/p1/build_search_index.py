@@ -32,14 +32,36 @@ def load_stopwords(filename):
             stopwords[line.strip()] = 0
     return stopwords
 
+def clean_up_words(line):
+    stop_words = load_stopwords('stopwords.txt')
+    for i in line:
+        if i in "1234567890-=+_)(*&^%$#@!:;>.<,?/":
+            line.replace(i, '')
+    line = line.lower().split()
+    temp = line[:]
+    for i in temp:
+        if i in stop_words:
+            line.remove(i)
+    return line
 
-def word_list(text):
+
+
+def word_list(docs):
     '''
         Change case to lower and split the words using a SPACE
         Clean up the text by remvoing all the non alphabet characters
         return a list of words
     '''
-    pass
+
+    
+    word_list=[]
+    for line in docs:
+        word_list = word_list + clean_up_words(line)
+    return word_list
+
+
+
+
 
 def build_search_index(docs):
     '''
@@ -47,27 +69,22 @@ def build_search_index(docs):
     '''
 
     # initialize a search index (an empty dictionary)
-    temp_list = []
+    
     dictionary = {}
     #removing stop words
-    stop_words = load_stopwords('stopwords.txt')
-    for line in docs:
-        var=line.split()
-        print(var)
-        temp1 = var[:]
-        for i in temp1:
-            if i not in  stop_words:
-                temp_list.append(i)   
-    for i in range(len(docs)):
-        for j in temp_list:
-            if j not in dictionary.keys():
-                k=docs[i].count(j)
-                t=(i, k)
-                dictionary[j] = t
-            else:
-                k=docs[i].count(j)
-                t=(i, k)
-                dictionary[j] = dictionary[i].append(t)
+    wordlist=word_list(docs)
+    for index, line in enumerate(docs):
+        line=line.split()
+        for word in line:
+            if word in wordlist:
+                if word not in dictionary:
+                    k=line.count(word)
+                    t = (index, k)
+                    dictionary[word] = t
+                else:
+                    k=line.count(word)
+                    t = (index, k)
+                    dictionary[word] = dictionary[word]+t
     return dictionary
     #indexing the dictionary 
     #for i in range(len(docs)):
