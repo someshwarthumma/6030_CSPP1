@@ -33,6 +33,9 @@ def load_stopwords(filename):
     return stopwords
 
 def clean_up_words(line):
+    '''
+    To remove the unwanted letters in a line
+    '''
     stop_words = load_stopwords('stopwords.txt')
     for i in line:
         if i in "1234567890-=+_)(*&^%$#@!:;>.<,?/":
@@ -54,7 +57,7 @@ def word_list(docs):
     '''
 
     
-    word_list=[]
+    word_list = []
     for line in docs:
         word_list = word_list + clean_up_words(line)
     return word_list
@@ -72,19 +75,19 @@ def build_search_index(docs):
     
     dictionary = {}
     #removing stop words
-    wordlist=word_list(docs)
+    wordlist = word_list(docs)
     for index, line in enumerate(docs):
-        line=line.split()
+        line = line.split()
         for word in line:
             if word in wordlist:
                 if word not in dictionary:
-                    k=line.count(word)
+                    k = line.count(word)
                     t = (index, k)
-                    dictionary[word] = t
+                    dictionary[word] = [t]
                 else:
-                    k=line.count(word)
-                    t = (index, k)
-                    dictionary[word] = dictionary[word]+t
+                    count_=line.count(word)
+                    temp = (index, count_)
+                    dictionary[word] = dictionary[word].append(temp)
     return dictionary
     #indexing the dictionary 
     #for i in range(len(docs)):
