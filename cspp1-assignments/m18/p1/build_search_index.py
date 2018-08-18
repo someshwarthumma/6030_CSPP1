@@ -56,7 +56,6 @@ def word_list(docs):
         return a list of words
     '''
 
-    
     word_list = []
     for line in docs:
         word_list = word_list + clean_up_words(line)
@@ -72,7 +71,7 @@ def build_search_index(docs):
     '''
 
     # initialize a search index (an empty dictionary)
-    
+
     dictionary = {}
     #removing stop words
     wordlist = word_list(docs)
@@ -85,7 +84,7 @@ def build_search_index(docs):
                     t = (index, k)
                     dictionary[word] = [t]
                 else:
-                    count_=line.count(word)
+                    count_ = line.count(word)
                     temp = (index, count_)
                     dictionary[word] = dictionary[word].append(temp)
     return dictionary
