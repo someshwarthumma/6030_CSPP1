@@ -89,8 +89,7 @@ def build_search_index(docs):
                     temp = (index, count_)
                     dictionary[word] = dictionary[word].append(temp)
     return dictionary
-    #indexing the dictionary 
-    #for i in range(len(docs)):
+
 
 
 '''
