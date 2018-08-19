@@ -20,6 +20,7 @@
         .
     }
 '''
+import re
 
 # helper function to load the stop words from a file
 def load_stopwords(filename):
@@ -37,16 +38,19 @@ def clean_up_words(line):
     '''
     To remove the unwanted letters in a line
     '''
+    loclist=[]
     stop_words = load_stopwords('stopwords.txt')
-    for i in line:
-        if i in "1234567890-=+_)(*&^%$#@!:;>.<,?/":
-            line.replace(i, '')
     line = line.lower().split()
-    temp = line[:]
-    for i in temp:
-        if i in stop_words:
-            line.remove(i)
-    return line
+    for every in line:
+        regex = re.compile('[^a-z]')
+        every = regex.sub('', every)
+        loclist.append(every)
+
+    # temp = line[:]
+    # for i in temp:
+    #     if i in stop_words:
+    #         line.remove(i)
+    return loclist
 
 
 
@@ -72,22 +76,30 @@ def build_search_index(docs):
     '''
 
     # initialize a search index (an empty dictionary)
-
+    print(docs)
     dictionary = {}
     #removing stop words
     wordlist = word_list(docs)
+    print("wordlist: ",wordlist)
     for index, line in enumerate(docs):
+        print("index:",index)
+        print("line :",line)
         line = line.split()
+        print("line_split :",line)
         for word in line:
-            if word in wordlist:
-                if word not in dictionary:
-                    count_ = line.count(word)
-                    temp = (index, count_)
-                    dictionary[word] = [temp]
-                else:
-                    count_ = line.count(word)
-                    temp = (index, count_)
-                    dictionary[word] = dictionary[word].append(temp)
+            word=word.lower()
+            regex = re.compile('[^a-z]')
+            word = regex.sub('', word)
+            if word not in load_stopwords('stopwords.txt'):
+                if word in wordlist:
+                    if word not in dictionary:
+                        count_ = line.count(word)
+                        temp = (index, count_)
+                        dictionary[word] = [temp]
+                    else:
+                        count_ = line.count(word)
+                        temp = (index, count_)
+                        dictionary[word].append(temp)
     return dictionary
 
 
