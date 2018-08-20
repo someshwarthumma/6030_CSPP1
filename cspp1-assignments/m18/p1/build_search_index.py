@@ -38,18 +38,13 @@ def clean_up_words(line):
     '''
     To remove the unwanted letters in a line
     '''
-    loclist=[]
+    loclist = []
     stop_words = load_stopwords('stopwords.txt')
     line = line.lower().split()
     for word in line:
         regex = re.compile('[^a-z]')
-        every= regex.sub('', word)
+        every = regex.sub('', word)
         loclist.append(every)
-
-    # temp = line[:]
-    # for i in temp:
-    #     if i in stop_words:
-    #         line.remove(i)
     return loclist
 
 
@@ -78,7 +73,6 @@ def build_search_index(docs):
     # initialize a search index (an empty dictionary)
 
     stop_words = load_stopwords('stopwords.txt')
-    #print(docs)
     dictionary = {}
     for index, line in enumerate(docs):
         upd_line = clean_up_words(line)
@@ -92,39 +86,6 @@ def build_search_index(docs):
                     count_ = upd_line.count(word)
                     temp = (index, count_)
                     dictionary[word].append(temp)
-    
-    '''
-    #removing stop words
-    wordlist = word_list(docs)
-    print("wordlist: ",wordlist)
-    for index, line in enumerate(docs):
-        print("index:",index)
-        print("line :",line)
-        line = line.split()
-        print("line_split :",line)
-        for word in line:
-            word=word.lower()
-            regex = re.compile('[^a-z]')
-            word = regex.sub('', word)
-            if word not in load_stopwords('stopwords.txt'):
-                line = line.split()
-                loclist=[]
-                for every in line:
-                    regex = re.compile('[^a-z]')
-                    every = regex.sub('', every)
-                    loclist.append(every)
-
-                if word in wordlist:
-                    if word not in dictionary:
-                        count_ = loclist.count(word)
-                        temp = (index, count_)
-                        dictionary[word] = [temp]
-                    else:
-                        count_ = line.count(word)
-                        temp = (index, count_)
-                        dictionary[word].append(temp)
-    '''
-
     return dictionary
 
 
