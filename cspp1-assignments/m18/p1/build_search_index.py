@@ -41,9 +41,9 @@ def clean_up_words(line):
     loclist=[]
     stop_words = load_stopwords('stopwords.txt')
     line = line.lower().split()
-    for every in line:
+    for word in line:
         regex = re.compile('[^a-z]')
-        every = regex.sub('', every)
+        every= regex.sub('', word)
         loclist.append(every)
 
     # temp = line[:]
@@ -76,8 +76,24 @@ def build_search_index(docs):
     '''
 
     # initialize a search index (an empty dictionary)
+
+    stop_words = load_stopwords('stopwords.txt')
     print(docs)
     dictionary = {}
+    for index, line in enumerate(docs):
+        upd_line = clean_up_words(line)
+        for word in set(upd_line):
+            if word not in stop_words:
+                if word not in dictionary:
+                    count_ = upd_line.count(word)
+                    temp = (index, count_)
+                    dictionary[word] = [temp]
+                else:
+                    count_ = upd_line.count(word)
+                    temp = (index, count_)
+                    dictionary[word].append(temp)
+    
+    '''
     #removing stop words
     wordlist = word_list(docs)
     print("wordlist: ",wordlist)
@@ -91,15 +107,24 @@ def build_search_index(docs):
             regex = re.compile('[^a-z]')
             word = regex.sub('', word)
             if word not in load_stopwords('stopwords.txt'):
+                line = line.split()
+                loclist=[]
+                for every in line:
+                    regex = re.compile('[^a-z]')
+                    every = regex.sub('', every)
+                    loclist.append(every)
+
                 if word in wordlist:
                     if word not in dictionary:
-                        count_ = line.count(word)
+                        count_ = loclist.count(word)
                         temp = (index, count_)
                         dictionary[word] = [temp]
                     else:
                         count_ = line.count(word)
                         temp = (index, count_)
                         dictionary[word].append(temp)
+    '''
+
     return dictionary
 
 
