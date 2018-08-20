@@ -78,7 +78,7 @@ def build_search_index(docs):
     # initialize a search index (an empty dictionary)
 
     stop_words = load_stopwords('stopwords.txt')
-    print(docs)
+    #print(docs)
     dictionary = {}
     for index, line in enumerate(docs):
         upd_line = clean_up_words(line)
