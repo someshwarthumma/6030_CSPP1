@@ -39,7 +39,6 @@ def clean_up_words(line):
     To remove the unwanted letters in a line
     '''
     loclist = []
-    stop_words = load_stopwords('stopwords.txt')
     line = line.lower().split()
     for word in line:
         regex = re.compile('[^a-z]')
