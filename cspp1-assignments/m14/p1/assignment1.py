@@ -134,7 +134,7 @@ def main():
     '''
         Function to handle testcases
     '''
-    data = Message(input())
+    data = input()
     data.get_message_text()
     print(data.apply_shift(int(input())))
 
