@@ -146,14 +146,14 @@ class PlaintextMessage(Message):
         Hint: consider using the parent class constructor so less
         code is repeated
         '''
-        self.shift = shift
-        self.message_text = text
+        self.shift =shift
+        self.message_text =text
         Message.__init__(self, text)
-        self.valid_words = load_words(WORDLIST_FILENAME)
+        self.valid_words =load_words(WORDLIST_FILENAME)
         self.encrypting_dict = self.build_shift_dict(shift)
         self.message_text_encrypted = self.apply_shift(shift)
 
-    def get_shift(self):
+    #def get_shift(self):
         '''
         Used to safely access self.shift outside of the class
 
