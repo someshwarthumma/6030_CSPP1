@@ -13,7 +13,7 @@ def mult_matrix(matrix1, matrix2, dimensions1, dimensions2):
     if dimensions1[1] != dimensions2[0]:
         #print("Error: Matrix shapes invalid for mult")
         print("Error: Matrix shapes invalid for mult")
-        return
+        return None
     for i in range(int(dimensions1[0])):
         temp = []
         for j in range(int(dimensions2[1])):
@@ -36,7 +36,7 @@ def add_matrix(matrix1, matrix2, dimensions1, dimensions2):
     '''
     if dimensions1[0] != dimensions2[0] or dimensions1[1] != dimensions2[1]:
         print("Error: Matrix shapes invalid for addition")
-        return
+        return None
     addition = []
     for i in range(int(dimensions1[0])):
         temp = []
