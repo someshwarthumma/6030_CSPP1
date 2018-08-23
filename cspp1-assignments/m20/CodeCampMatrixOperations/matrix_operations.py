@@ -9,19 +9,19 @@ def mult_matrix(m1, m2,d1, d2):
     '''
     multiplication = []
     if d1[1] != d2[0]:
-        print("Error: Matrix shapes invalid for mult")
+        #print("Error: Matrix shapes invalid for mult")
         raise Exception("Error: Matrix shapes invalid for mult")
     for i in range(int(d1[1])):
         temp = []
         for j in range(int(d2[0])):
             temp.append(j)
         multiplication.append(temp)
-    print(multiplication)    
+    #print(multiplication)    
     for i in range(int(d1[0])):
         for j in range(int(d2[1])):
             for k in range(int(d2[0])):
                 multiplication[i][j] += int(m1[i][k])*int(m2[k][j])
-    print("Multipication: ",multiplication)
+    #print("Multipication: ",multiplication)
      
 
 
@@ -44,12 +44,12 @@ def add_matrix(m1, m2,d1, d2):
     for i in range(int(d1[0])):
         temp = []
         for j in range(int(d1[1])):
-            print("m1[i][j]",m1[i][j])
-            print("m2[i][j]",m2[i][j])
+            #print("m1[i][j]",m1[i][j])
+            #print("m2[i][j]",m2[i][j])
             temp.append(int(m1[i][j])+int(m2[i][j]))
-            print("temp: ",temp)
+            #print("temp: ",temp)
         addition.append(temp)
-        print("addition: ",addition)
+        #print("addition: ",addition)
     return addition
 
 def read_matrix(dimensions):
@@ -79,12 +79,12 @@ def main():
     dimensions1 = input()
     dimensions1 = dimensions1.split(',')
     matrix1 = read_matrix(dimensions1)
-    print("matrix1: ",matrix1)
+    #print("matrix1: ",matrix1)
     # read matrix 2
     dimensions2 = input()
     dimensions2 = dimensions2.split(',')
     matrix2 = read_matrix(dimensions2)
-    print("matrix2: ",matrix2)
+    #print("matrix2: ",matrix2)
     # add matrix 1 and matrix 2
     addition = add_matrix(matrix1,matrix2,dimensions1,dimensions2)
     # multiply matrix 1 and matrix 2
