@@ -64,7 +64,7 @@ def read_matrix(dimensions):
         #print("rows: "+str(type(rows)),"columns: "+str(type(columns)))
         for i in range(rows):
             colum_data = input()
-            if len(colum_data) == 0:
+            if not colum_data:
                 raise Exception("Error: Invalid input for the matrix")
             colum_data = colum_data.split(" ")
             if len(colum_data) != columns:
