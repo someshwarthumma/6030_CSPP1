@@ -87,9 +87,10 @@ def main():
     #print("matrix2: ",matrix2)
     # add matrix 1 and matrix 2
     addition = add_matrix(matrix1,matrix2,dimensions1,dimensions2)
+    print(addition)
     # multiply matrix 1 and matrix 2
     multiplication = mult_matrix(matrix1,matrix2,dimensions1,dimensions2)
-    pass
+    print(multiplication)
 
 if __name__ == '__main__':
     main()
