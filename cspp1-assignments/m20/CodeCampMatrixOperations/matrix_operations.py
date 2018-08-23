@@ -1,5 +1,5 @@
 
-def mult_matrix(matrix1, matrix2,dimensions1, dimensions2):
+def mult_matrix(matrix1, matrix2, dimensions1, dimensions2):
     '''
         check if the matrix1 columns = matrix2 rows
         mult the matrices and return the result matrix
@@ -25,7 +25,7 @@ def mult_matrix(matrix1, matrix2,dimensions1, dimensions2):
     #print("Multipication: ",multiplication)
     return multiplication
 
-def add_matrix(matrix1, matrix2,dimensions1, dimensions2):
+def add_matrix(matrix1, matrix2, dimensions1, dimensions2):
     '''
         check if the matrix shapes are similar
         add the matrices and return the result matrix
@@ -86,10 +86,10 @@ def main():
         matrix2 = read_matrix(dimensions2)
         #print("matrix2: ",matrix2)
         #add matrix 1 and matrix 2
-        addition = add_matrix(matrix1,matrix2,dimensions1,dimensions2)
+        addition = add_matrix(matrix1, matrix2, dimensions1, dimensions2)
         print(addition)
         # multiply matrix 1 and matrix 2
-        multiplication = mult_matrix(matrix1,matrix2,dimensions1,dimensions2)
+        multiplication = mult_matrix(matrix1, matrix2, dimensions1, dimensions2)
         print(multiplication)
     except Exception as e:
         print(e)
