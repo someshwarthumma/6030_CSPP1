@@ -1,6 +1,7 @@
 '''
     Assignment-1 Create Social Network
 '''
+import re
 
 def create_social_network(data):
     '''
@@ -32,11 +33,14 @@ def create_social_network(data):
         Empty dictionary is not None, it is a dictionary with no keys
     '''
     my_dictionary = {}
+    if [' follows '] != re.findall(" follows ",data):
+    	return my_dictionary
 
     data = data.split('\n')
     data.pop()
-    if len(data) == 1:
-        return my_dictionary
+    #print(re.search(" follows ",data))
+    # if len(data) == 1:
+    #     return my_dictionary
     for element_in_data in data:
         name, followers = element_in_data.split(" follows ")
         temp = followers.split(",")
