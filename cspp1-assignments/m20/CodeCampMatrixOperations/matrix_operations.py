@@ -10,7 +10,8 @@ def mult_matrix(m1, m2,d1, d2):
     multiplication = []
     if d1[1] != d2[0]:
         #print("Error: Matrix shapes invalid for mult")
-        raise Exception("Error: Matrix shapes invalid for mult")
+        print("Error: Matrix shapes invalid for mult")
+        return
     for i in range(int(d1[0])):
         temp = []
         for j in range(int(d2[1])):
