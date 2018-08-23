@@ -12,11 +12,10 @@ def mult_matrix(m1, m2,d1, d2):
         #print("Error: Matrix shapes invalid for mult")
         raise Exception("Error: Matrix shapes invalid for mult")
     for i in range(int(d1[1])):
-        #temp = []
+        temp = []
         for j in range(int(d2[0])):
-            #temp.append(0)
-            multiplication[i].append(j)
-            multiplication[i][j]=0
+            temp.append(0)
+        multiplication.append(temp)
     #print(multiplication)    
     for i in range(int(d1[0])):
         for j in range(int(d2[1])):
