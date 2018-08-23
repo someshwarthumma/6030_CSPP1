@@ -1,5 +1,5 @@
 
-def mult_matrix(m1, m2,d1, d2):
+def mult_matrix(m1, m2,dimensions1, dimensions2):
     '''
         check if the matrix1 columns = matrix2 rows
         mult the matrices and return the result matrix
@@ -8,24 +8,24 @@ def mult_matrix(m1, m2,d1, d2):
         error message should be "Error: Matrix shapes invalid for mult"
     '''
     multiplication = []
-    if d1[1] != d2[0]:
+    if dimensions1[1] != dimensions2[0]:
         #print("Error: Matrix shapes invalid for mult")
         print("Error: Matrix shapes invalid for mult")
         return
-    for i in range(int(d1[0])):
+    for i in range(int(dimensions1[0])):
         temp = []
-        for j in range(int(d2[1])):
+        for j in range(int(dimensions2[1])):
             temp.append(0)
         multiplication.append(temp)
     #print(multiplication)    
-    for i in range(int(d1[0])):
-        for j in range(int(d2[1])):
-            for k in range(int(d2[0])):
+    for i in range(int(dimensions1[0])):
+        for j in range(int(dimensions2[1])):
+            for k in range(int(dimensions2[0])):
                 multiplication[i][j] += int(m1[i][k])*int(m2[k][j])
     #print("Multipication: ",multiplication)
     return multiplication
 
-def add_matrix(m1, m2,d1, d2):
+def add_matrix(m1, m2,dimensions1, dimensions2):
     '''
         check if the matrix shapes are similar
         add the matrices and return the result matrix
@@ -33,13 +33,13 @@ def add_matrix(m1, m2,d1, d2):
         and return None
         error message should be "Error: Matrix shapes invalid for addition"
     '''
-    if d1[0] != d2[0] or d1[1] != d2[1]:
+    if dimensions1[0] != dimensions2[0] or dimensions1[1] != dimensions2[1]:
         print("Error: Matrix shapes invalid for addition")
         return
     addition = [] 
-    for i in range(int(d1[0])):
+    for i in range(int(dimensions1[0])):
         temp = []
-        for j in range(int(d1[1])):
+        for j in range(int(dimensions1[1])):
             #print("m1[i][j]",m1[i][j])
             #print("m2[i][j]",m2[i][j])
             temp.append(int(m1[i][j])+int(m2[i][j]))
