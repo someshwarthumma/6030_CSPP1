@@ -22,12 +22,7 @@ def mult_matrix(m1, m2,d1, d2):
             for k in range(int(d2[0])):
                 multiplication[i][j] += int(m1[i][k])*int(m2[k][j])
     #print("Multipication: ",multiplication)
-     
-
-
-
-
-    pass
+    return multiplication
 
 def add_matrix(m1, m2,d1, d2):
     '''
