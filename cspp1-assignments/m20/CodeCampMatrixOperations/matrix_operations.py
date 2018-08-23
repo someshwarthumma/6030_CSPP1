@@ -70,26 +70,27 @@ def read_matrix(dimensions):
             matrix.append(colum_data)
         return matrix
     except:
-        print("Error: Invalid input for the matrix")
-        pass
+        raise Exception("Error: Invalid input for the matrix")
 
 def main():
-    # read matrix 1
-    dimensions1 = input()
-    dimensions1 = dimensions1.split(',')
-    matrix1 = read_matrix(dimensions1)
-    #print("matrix1: ",matrix1)
-    # read matrix 2
-    dimensions2 = input()
-    dimensions2 = dimensions2.split(',')
-    matrix2 = read_matrix(dimensions2)
-    #print("matrix2: ",matrix2)
-    # add matrix 1 and matrix 2
-    addition = add_matrix(matrix1,matrix2,dimensions1,dimensions2)
-    print(addition)
-    # multiply matrix 1 and matrix 2
-    multiplication = mult_matrix(matrix1,matrix2,dimensions1,dimensions2)
-    print(multiplication)
-
+    try:
+        # read matrix 1
+        dimensions1 = input()
+        dimensions1 = dimensions1.split(',')
+        matrix1 = read_matrix(dimensions1)
+        print("matrix1: ",matrix1)
+        # read matrix 2
+        dimensions2 = input()
+        dimensions2 = dimensions2.split(',')
+        matrix2 = read_matrix(dimensions2)
+        rint("matrix2: ",matrix2)
+        #add matrix 1 and matrix 2
+        addition = add_matrix(matrix1,matrix2,dimensions1,dimensions2)
+        print(addition)
+        # multiply matrix 1 and matrix 2
+        multiplication = mult_matrix(matrix1,matrix2,dimensions1,dimensions2)
+        print(multiplication)
+    except Exception as e:
+        print(e)
 if __name__ == '__main__':
     main()
