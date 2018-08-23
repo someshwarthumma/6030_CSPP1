@@ -95,7 +95,7 @@ def main():
         # multiply matrix 1 and matrix 2
         multiplication = mult_matrix(matrix1, matrix2, dimensions1, dimensions2)
         print(multiplication)
-    except Exception as e:
-        print(e)
+    except Exception as Error:
+        print(Error)
 if __name__ == '__main__':
     main()
