@@ -1,4 +1,6 @@
-
+'''
+To perform the matrixs operations
+'''
 def mult_matrix(matrix1, matrix2, dimensions1, dimensions2):
     '''
         check if the matrix1 columns = matrix2 rows
@@ -73,6 +75,9 @@ def read_matrix(dimensions):
         raise Exception("Error: Invalid input for the matrix")
 
 def main():
+    '''
+    Initialisation
+    '''
     try:
         # read matrix 1
         dimensions1 = input()
