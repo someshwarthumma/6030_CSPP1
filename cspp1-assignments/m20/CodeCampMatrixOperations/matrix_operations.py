@@ -34,7 +34,7 @@ def add_matrix(m1, m2,d1, d2):
     '''
     if d1[0] != d2[0] or d1[1] != d2[1]:
         print("Error: Matrix shapes invalid for addition")
-        raise Exception("Error: Matrix shapes invalid for addition")
+        return
     addition = [] 
     for i in range(int(d1[0])):
         temp = []
