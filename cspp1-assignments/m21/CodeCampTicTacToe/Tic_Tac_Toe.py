@@ -1,3 +1,6 @@
+'''
+To announce the winner of the game for the given inputs
+'''
 def transpose_of_matrix(matrix):
     '''
     To tranpose the given matrix
