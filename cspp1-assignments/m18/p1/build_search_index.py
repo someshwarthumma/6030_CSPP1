@@ -55,10 +55,10 @@ def word_list(docs):
         return a list of words
     '''
 
-    word_list = []
+    word_list1 = []
     for line in docs:
-        word_list = word_list + clean_up_words(line)
-    return word_list
+        word_list1 = word_list1 + clean_up_words(line)
+    return word_list1
 
 
 
