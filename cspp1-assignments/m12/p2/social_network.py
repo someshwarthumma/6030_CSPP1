@@ -13,15 +13,12 @@ def follow(network, arg1, arg2):
         so, this shoulnd result in adding arg2 to the followers list of arg1
         update the network dictionary and return it
     '''
-    if arg1 in list(network.keys()):
-        network[arg1].append(arg2)
+    if arg1 in network.keys():
+        if arg1 not in network[arg2]
+            network[arg1].append(arg2)
     else:
         network[arg1]=[arg2]
-    if arg2 in list(network.keys()):
-        if arg1 not in network[arg2]:
-            network[arg2].append(arg1)
-    else:
-        network[arg2]=[arg1]
+
     return network
 
 def unfollow(network, arg1, arg2):
@@ -34,7 +31,7 @@ def unfollow(network, arg1, arg2):
         update the network dictionary and return it
     '''
     if arg1 in network.keys():
-        network[arg1]=network[arg1].remove(arg2)
+        network[arg1].remove(arg2)
     return network
     
 def delete_person(network, arg1):
@@ -47,6 +44,12 @@ def delete_person(network, arg1):
         also, before deleting arg1, remove arg1 from the everyone's followers list
         update the network dictionary and return it
     '''
+
+    if arg1 in network.keys():
+        for arg in network.keys():
+            if arg1 in network[arg]:
+                network[arg].remove(arg1)
+         del network[arg1]
     return network
 def main():
     '''
