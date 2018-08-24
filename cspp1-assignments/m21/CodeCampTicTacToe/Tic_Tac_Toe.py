@@ -63,8 +63,7 @@ def read_input():
     To read the input matrix
     '''
     matrix = []
-    for i in range(3):
-        temp = []
+    for _ in range(3):
         matrix.append(input().split())
     return matrix
 
