@@ -32,6 +32,7 @@ def valid_game(matrix):
     else:
         return False
 
+
 def who_is_winner(matrix):
     '''
     To return the winner of the game
