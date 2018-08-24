@@ -33,7 +33,7 @@ def create_social_network(data):
         Empty dictionary is not None, it is a dictionary with no keys
     '''
     my_dictionary = {}
-    if [' follows '] == re.findall(" follows ",data):
+    if [' follows '] != re.findall(" follows ",data):
     	return my_dictionary
     data = data.split('\n')
     data.pop()
