@@ -29,11 +29,11 @@ def create_social_network(data):
         It may cause your test cases to fail although your output may be right
 
         Error handling case:
-        Return a empty dictionary if the string format of the data is invalid
+        Return a empty dictionary if the string format of the data is inval
         Empty dictionary is not None, it is a dictionary with no keys
     '''
     my_dictionary = {}
-    if [' follows '] not as re.findall(" follows ",data):
+    if ([' follows '] != re.findall(" follows ",data)):
     	return my_dictionary
     data = data.split('\n')
     data.pop()
