@@ -1,8 +1,11 @@
 def transpose_of_matrix(matrix):
+    '''
+    To tranpose the given matrix
+    '''
     tr_matrix = []
-    st = "0 0 0"
+    string_ = "0 0 0"
     for i in range(3):
-        tr_matrix.append(st.split())
+        tr_matrix.append(string_.split())
     temp_matrix = matrix[:]
     for i in range(3):
         for j in range(3):
@@ -10,6 +13,9 @@ def transpose_of_matrix(matrix):
     return tr_matrix
 
 def valid_game(matrix):
+    '''
+    To check for a valid game
+    '''
     temp = 0
     for i in range(3):
         if len(set(matrix[i])) == 1:
@@ -24,6 +30,9 @@ def valid_game(matrix):
         return False
 
 def who_is_winner(matrix):
+    '''
+    To return the winner of the game
+    '''
     if matrix[0][0] == matrix[1][1] == matrix[2][2] == 'x':
         return 'x'
     elif matrix[0][0] == matrix[1][1] == matrix[2][2] == 'o':
@@ -47,6 +56,9 @@ def who_is_winner(matrix):
         return "draw"
 
 def read_input():
+    '''
+    To read the input matrix
+    '''
     matrix = []
     for i in range(3):
         temp = []
@@ -54,6 +66,9 @@ def read_input():
     return matrix
 
 def valid_input(matrix):
+    '''
+    To check for valid input
+    '''
     for i in range(3):
         for j in range(3):
             if matrix[i][j] in "xo.":
@@ -63,6 +78,9 @@ def valid_input(matrix):
     return True
 
 def main():
+    '''
+    Initialisation
+    '''
     matrix = read_input()
     if not valid_input(matrix):
         print("invalid input")
