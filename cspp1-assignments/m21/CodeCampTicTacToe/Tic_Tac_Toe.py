@@ -24,10 +24,13 @@ def valid_game(matrix):
 		return False
 
 def who_is_winner(matrix):
-
 	if matrix[0][0] == matrix[1][1] == matrix[2][2] == 'x':
 		return 'x'
 	elif matrix[0][0] == matrix[1][1] == matrix[2][2] == 'o':
+		return 'o'
+	elif matrix[0][2] == matrix[1][1] == matrix[2][0] == 'x':
+		return 'x'
+	elif matrix[0][2] == matrix[1][1] == matrix[2][0] == 'o':
 		return 'o'
 	else:
 		for i in range(3):
