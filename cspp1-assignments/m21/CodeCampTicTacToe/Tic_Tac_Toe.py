@@ -50,7 +50,7 @@ def who_is_winner(matrix):
                 return 'x'
             if list(set(matrix[i])) == ['o'] and len(set(matrix[i])) == 1:
                 return 'o'
-        temp_matrix = transpose_of_matrix(matrix)
+    temp_matrix = transpose_of_matrix(matrix)
     for i in range(3):
         if list(set(temp_matrix[i])) == ['x'] and len(set(temp_matrix[i])) == 1:
             return 'x'
