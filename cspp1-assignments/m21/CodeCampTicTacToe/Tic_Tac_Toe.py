@@ -30,7 +30,7 @@ def valid_game(matrix):
     # if temp <= 1:
     #     return True
     # return False
-    return bool(temp)
+    return bool(temp <= 1)
 
 
 def who_is_winner(matrix):
