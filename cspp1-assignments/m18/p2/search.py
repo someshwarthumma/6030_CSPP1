@@ -28,14 +28,7 @@
 
     Note: PyLint score need not be 10/10. Anything above 9.5 is good.
 '''
-'''
-def load_stopwords(filename):
-    stopwords = []
-    file = open(filename, 'r')
-    for line in file:
-        stopwords.append(line)
-    return stopwords
-'''
+
 def search(search_index, query):
     '''
         function to search through the search index and return the results
@@ -50,7 +43,7 @@ def search(search_index, query):
     #print("query_list:",query_list)
     final_temp = []
     temp=[]
-    locList = []
+    loc_list = []
     for word in query_list:
         #print("word: ",word)
         if word in search_index:
@@ -59,9 +52,9 @@ def search(search_index, query):
             #print("temp: ",temp)
     for each in temp:
         for each1 in each:
-            locList.append(each1[0])
-    #print("loclist: ",locList)
-    return set(locList)
+            loc_list.append(each1[0])
+    #print("loc_list: ",loc_list)
+    return set(loc_list)
 
 def process_queries(search_index, queries):
     '''
@@ -73,7 +66,7 @@ def process_queries(search_index, queries):
     #stopwords = load_stopwords('stopwords.txt')
     #print("stopwords:",stopwords)
     for element in queries:
-        print(search(search_index, element))          
+        print(search(search_index, element))
     pass
 
 def main():
@@ -85,7 +78,7 @@ def main():
 
     # read the number of search queries
     lines = int(input())
-    
+
     # read the search queries into a list
     queries = []
     for i in range(lines):
