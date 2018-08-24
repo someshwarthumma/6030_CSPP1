@@ -3,6 +3,8 @@ To announce the winner of the game for the given inputs
 '''
 def transpose_of_matrix(matrix):
     '''
+    param : input is matrix
+    return matrix
     To tranpose the given matrix
     '''
     tr_matrix = []
@@ -17,6 +19,8 @@ def transpose_of_matrix(matrix):
 
 def valid_game(matrix):
     '''
+    param : input is a matrix
+    return: matrix
     To check for a valid game
     '''
     temp = 0
@@ -27,9 +31,6 @@ def valid_game(matrix):
     for i in range(3):
         if len(set(temp_matrix[i])) == 1:
             temp = temp +1
-    # if temp <= 1:
-    #     return True
-    # return False
     return bool(temp <= 1)
 
 
@@ -60,6 +61,8 @@ def who_is_winner(matrix):
 
 def read_input():
     '''
+    input: string
+    return: matrix
     To read the input matrix
     '''
     matrix = []
