@@ -46,10 +46,10 @@ def who_is_winner(matrix):
     if matrix[0][2] == matrix[1][1] == matrix[2][0] == 'o':
         return 'o'
     for i in range(3):
-            if list(set(matrix[i])) == ['x'] and len(set(matrix[i])) == 1:
-                return 'x'
-            if list(set(matrix[i])) == ['o'] and len(set(matrix[i])) == 1:
-                return 'o'
+        if list(set(matrix[i])) == ['x'] and len(set(matrix[i])) == 1:
+            return 'x'
+        if list(set(matrix[i])) == ['o'] and len(set(matrix[i])) == 1:
+            return 'o'
     temp_matrix = transpose_of_matrix(matrix)
     for i in range(3):
         if list(set(temp_matrix[i])) == ['x'] and len(set(temp_matrix[i])) == 1:
@@ -57,7 +57,6 @@ def who_is_winner(matrix):
         if list(set(temp_matrix[i])) == ['o'] and len(set(temp_matrix[i])) == 1:
             return 'o'
     return "draw"
-        
 
 def read_input():
     '''
