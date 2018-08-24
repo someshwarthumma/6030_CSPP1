@@ -34,7 +34,7 @@ def create_social_network(data):
     '''
     my_dictionary = {}
     print("findall: ",re.findall(" follows ",data))
-    if ([' follows '] != re.findall(" follows ",data)):
+    if ([] == re.findall(" follows ",data)):
     	return my_dictionary
     data = data.split('\n')
     data.pop()
