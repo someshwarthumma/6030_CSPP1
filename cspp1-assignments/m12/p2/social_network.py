@@ -13,7 +13,6 @@ def follow(network, arg1, arg2):
         so, this shoulnd result in adding arg2 to the followers list of arg1
         update the network dictionary and return it
     '''
-
     if arg1 in list(network.keys()):
         network[arg1].append(arg2)
     else:
@@ -56,10 +55,10 @@ def main():
         output = line.split(" ")
         if output[0] == "follow":
             network = follow(network, output[1], output[2])
-        #elif output[0] == "unfollow":
-            #network = unfollow(network, output[1], output[2])
-        #elif output[0] == "delete":
-            #network = delete_person(network, output[1])
+        elif output[0] == "unfollow":
+            network = unfollow(network, output[1], output[2])
+        elif output[0] == "delete":
+            network = delete_person(network, output[1])
 
     print(network)
 
