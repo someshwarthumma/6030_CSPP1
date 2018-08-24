@@ -101,8 +101,6 @@ def build_search_index(docs):
 
     # return search index
 '''
-#helper function to print the search index
-# use this to verify how the search index looks
 
 def print_search_index(index):
     '''
