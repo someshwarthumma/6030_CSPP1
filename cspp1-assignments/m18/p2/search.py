@@ -41,7 +41,7 @@ def search(search_index, query):
     #print("queries:",query)
     query_list = query.split()
     #print("query_list:",query_list)
-    final_temp = []
+    
     temp=[]
     loc_list = []
     for word in query_list:
