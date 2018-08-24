@@ -27,10 +27,10 @@ def valid_game(matrix):
     for i in range(3):
         if len(set(temp_matrix[i])) == 1:
             temp = temp +1
-    if temp <=1 :
-        return True
-    else:
-        return False
+    # if temp <= 1:
+    #     return True
+    # return False
+    return bool(temp)
 
 
 def who_is_winner(matrix):
