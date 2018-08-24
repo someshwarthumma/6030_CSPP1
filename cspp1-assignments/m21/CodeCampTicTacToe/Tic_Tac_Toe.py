@@ -39,25 +39,25 @@ def who_is_winner(matrix):
     '''
     if matrix[0][0] == matrix[1][1] == matrix[2][2] == 'x':
         return 'x'
-    elif matrix[0][0] == matrix[1][1] == matrix[2][2] == 'o':
+    if matrix[0][0] == matrix[1][1] == matrix[2][2] == 'o':
         return 'o'
-    elif matrix[0][2] == matrix[1][1] == matrix[2][0] == 'x':
+    if matrix[0][2] == matrix[1][1] == matrix[2][0] == 'x':
         return 'x'
-    elif matrix[0][2] == matrix[1][1] == matrix[2][0] == 'o':
+    if matrix[0][2] == matrix[1][1] == matrix[2][0] == 'o':
         return 'o'
-    else:
-        for i in range(3):
+    for i in range(3):
             if list(set(matrix[i])) == ['x'] and len(set(matrix[i])) == 1:
                 return 'x'
             if list(set(matrix[i])) == ['o'] and len(set(matrix[i])) == 1:
                 return 'o'
         temp_matrix = transpose_of_matrix(matrix)
-        for i in range(3):
-            if list(set(temp_matrix[i])) == ['x'] and len(set(temp_matrix[i])) == 1:
-                return 'x'
-            if list(set(temp_matrix[i])) == ['o'] and len(set(temp_matrix[i])) == 1:
-                return 'o'
-        return "draw"
+    for i in range(3):
+        if list(set(temp_matrix[i])) == ['x'] and len(set(temp_matrix[i])) == 1:
+            return 'x'
+        if list(set(temp_matrix[i])) == ['o'] and len(set(temp_matrix[i])) == 1:
+            return 'o'
+    return "draw"
+        
 
 def read_input():
     '''
