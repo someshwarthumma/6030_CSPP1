@@ -67,7 +67,7 @@ def process_queries(search_index, queries):
     #print("stopwords:",stopwords)
     for element in queries:
         print(search(search_index, element))
-    pass
+
 
 def main():
     '''
