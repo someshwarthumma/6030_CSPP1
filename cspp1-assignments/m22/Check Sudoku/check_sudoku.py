@@ -7,15 +7,15 @@
     Complete the check_sudoku function to check if the given grid
     satisfies all the sudoku rules given in the statement above.
 '''
-def sub_marix(sudoku, k, l):
+def sub_marix(sudoku, temp1, temp2):
     '''
     To extract a sub matrix
     '''
     sub = []
     for i in range(3):
-        i = i + k
+        i = i + temp1
         for j in range(3):
-            j = j + l
+            j = j + temp2
             sub.append(sudoku[i][j])
     return sub
 
