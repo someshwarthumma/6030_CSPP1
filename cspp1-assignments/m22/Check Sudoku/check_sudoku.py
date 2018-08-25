@@ -41,37 +41,37 @@ def check_sudoku(sudoku):
     transpose_matrix = transpose_of_matrix(sudoku)
     for i in range(9):
         if len(set(sudoku[i])) != 9:
-            print("line 44")
+            #print("line 44")
             return False
         if len(set(transpose_matrix[i])) != 9:
-            print("line 47")
+            #print("line 47")
             return False
         if len(set(sub_marix(sudoku,0,0))) != 9:
-            print("line 50")
+            #print("line 50")
             return False
         if len(set(sub_marix(sudoku,0,3))) != 9:
-            print("line 53")
+            #print("line 53")
             return False
         if len(set(sub_marix(sudoku,0,6))) != 9:
-            print("line 56")
+            #print("line 56")
             return False
         if len(set(sub_marix(sudoku,3,0))) != 9:
-            print("line 59")
+            #print("line 59")
             return False
         if len(set(sub_marix(sudoku,3,3))) != 9:
-            print("line 62")
+            #print("line 62")
             return False
         if len(set(sub_marix(sudoku,3,6))) != 9:
-            print("line 65")
+            #print("line 65")
             return False
         if len(set(sub_marix(sudoku,6,0))) != 9:
-            print("line 68")
+            #print("line 68")
             return False
         if len(set(sub_marix(sudoku,6,3))) != 9:
-            print("line 71")
+            #print("line 71")
             return False
         if len(set(sub_marix(sudoku,6,6))) != 9:
-            print("line 74")
+            #print("line 74")
             return False
         return True
 
