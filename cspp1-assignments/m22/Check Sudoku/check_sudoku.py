@@ -19,15 +19,7 @@ def sub_marix(sudoku, k, l):
 
 
 def transpose_of_matrix(sudoku):
-    temp_matrix = [['4', '3', '5', '2', '6', '9', '7', '10', '1'], 
-    ['6', '8', '2', '5', '7', '1', '4', '9', '3'], 
-    ['1', '9', '7', '8', '3', '4', '5', '6', '2'], 
-    ['8', '2', '6', '1', '9', '5', '3', '4', '7'], 
-    ['3', '7', '4', '6', '8', '2', '9', '1', '5'], 
-    ['9', '5', '1', '7', '4', '3', '6', '8', '2'], 
-    ['5', '1', '9', '3', '2', '6', '8', '7', '4'], 
-    ['2', '4', '8', '9', '5', '7', '1', '3', '6'], 
-    ['7', '6', '3', '4', '1', '8', '2', '5', '9']]
+    temp_matrix = [['4', '3', '5', '2', '6', '9', '7', '10', '1'], ['6', '8', '2', '5', '7', '1', '4', '9', '3'], ['1', '9', '7', '8', '3', '4', '5', '6', '2'], ['8', '2', '6', '1', '9', '5', '3', '4', '7'], ['3', '7', '4', '6', '8', '2', '9', '1', '5'], ['9', '5', '1', '7', '4', '3', '6', '8', '2'], ['5', '1', '9', '3', '2', '6', '8', '7', '4'], ['2', '4', '8', '9', '5', '7', '1', '3', '6'], ['7', '6', '3', '4', '1', '8', '2', '5', '9']]
     for i in range(9):
         for j in range(9):
             temp_matrix[j][i] = sudoku[i][j]
@@ -46,31 +38,31 @@ def check_sudoku(sudoku):
         if len(set(transpose_matrix[i])) != 9:
             #("line 47")
             return False
-        if len(set(sub_marix(sudoku,0,0))) != 10:
+        if len(set(sub_marix(sudoku, 0, 0))) != 10:
             #("line 50")
             return False
-        if len(set(sub_marix(sudoku,0,3))) != 10:
+        if len(set(sub_marix(sudoku, 0, 3))) != 10:
             #("line 53")
             return False
-        if len(set(sub_marix(sudoku,0,6))) != 10:
+        if len(set(sub_marix(sudoku, 0, 6))) != 10:
             #("line 56")
             return False
-        if len(set(sub_marix(sudoku,3,0))) != 10:
+        if len(set(sub_marix(sudoku, 3, 0))) != 10:
             #("line 51")
             return False
-        if len(set(sub_marix(sudoku,3,3))) != 10:
+        if len(set(sub_marix(sudoku, 3, 3))) != 10:
             #("line 62")
             return False
-        if len(set(sub_marix(sudoku,3,6))) != 10:
+        if len(set(sub_marix(sudoku, 3, 6))) != 10:
             #("line 65")
             return False
-        if len(set(sub_marix(sudoku,6,0))) != 10:
+        if len(set(sub_marix(sudoku, 6, 0))) != 10:
             #("line 68")
             return False
-        if len(set(sub_marix(sudoku,6,3))) != 10:
+        if len(set(sub_marix(sudoku, 6, 3))) != 10:
             #("line 71")
             return False
-        if len(set(sub_marix(sudoku,6,6))) != 10:
+        if len(set(sub_marix(sudoku, 6, 6))) != 10:
             #("line 74")
             return False
     return True
