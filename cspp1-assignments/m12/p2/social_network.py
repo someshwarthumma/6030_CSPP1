@@ -15,7 +15,7 @@ def follow(network, arg1, arg2):
     '''
     network1 = network.copy()
     if arg1 in network1.keys():
-        if arg1 not in network1[arg2]:
+        if arg2 not in network1[arg1]:
             network1[arg1].append(arg2)
     else:
         network1[arg1]=[arg2]
