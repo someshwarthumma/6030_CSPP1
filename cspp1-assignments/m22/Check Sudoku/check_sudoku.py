@@ -73,7 +73,7 @@ def check_sudoku(sudoku):
         if len(set(sub_marix(sudoku,6,6))) != 10:
             print("line 74")
             return False
-        return True
+    return True
 
 def main():
     '''
