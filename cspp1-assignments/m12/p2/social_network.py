@@ -34,7 +34,7 @@ def unfollow(network, arg1, arg2):
     if arg1 in network.keys():
         network[arg1].remove(arg2)
     return network
-    
+
 def delete_person(network, arg1):
     '''
         2 arguments are passed to this function
