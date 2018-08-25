@@ -6,7 +6,7 @@ import re
 
 def tokenize(string):
     '''
-    :param input is a list of list 
+    :param input is a list of list
     return a dictionary with word frequency
     '''
     dictionary = {}
@@ -18,7 +18,7 @@ def tokenize(string):
             else:
                 dictionary[word] = 1
     return dictionary
-            
+
 def main():
     '''
     Initialisation for Tokenise the given string
