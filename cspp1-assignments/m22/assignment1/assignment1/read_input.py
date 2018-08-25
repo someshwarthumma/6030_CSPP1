@@ -8,7 +8,6 @@ def main():
     To read the text from a given file
     and print the file onto the console
     '''
-    
     text = []
     number_of_line = int(input())
     for var in range(number_of_line):
