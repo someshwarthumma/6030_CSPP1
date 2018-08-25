@@ -8,6 +8,9 @@
     satisfies all the sudoku rules given in the statement above.
 '''
 def sub_marix(sudoku, k, l):
+    '''
+    To extract a sub matrix
+    '''
     sub = []
     for i in range(3):
         i = i + k
@@ -19,6 +22,9 @@ def sub_marix(sudoku, k, l):
 
 
 def transpose_of_matrix(sudoku):
+    '''
+    to find transpose of a matrix 
+    '''
     temp_matrix = [['4', '3', '5', '2', '6', '9', '7', '10', '1'], ['6', '8', '2', '5', '7', '1', '4', '9', '3'], ['1', '9', '7', '8', '3', '4', '5', '6', '2'], ['8', '2', '6', '1', '9', '5', '3', '4', '7'], ['3', '7', '4', '6', '8', '2', '9', '1', '5'], ['9', '5', '1', '7', '4', '3', '6', '8', '2'], ['5', '1', '9', '3', '2', '6', '8', '7', '4'], ['2', '4', '8', '9', '5', '7', '1', '3', '6'], ['7', '6', '3', '4', '1', '8', '2', '5', '9']]
     for i in range(9):
         for j in range(9):
@@ -77,7 +83,7 @@ def main():
     sudoku = []
 
     # loop to read 9 lines of input from console
-    for i in range(9):
+    for _ in range(9):
         # read a line, split it on SPACE and append row to list
         row = input().split(' ')
         sudoku.append(row)
