@@ -14,6 +14,9 @@ def print_dictionary(dictionary):
     for key in keys:
         print(key, "-", dictionary[key])
 def main():
+    '''
+    Initialisation for reading the dictionary
+    '''
     dictionary = eval(input())
     print_dictionary(dictionary)
 
