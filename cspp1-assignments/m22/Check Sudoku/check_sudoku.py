@@ -46,32 +46,32 @@ def check_sudoku(sudoku):
         if len(set(transpose_matrix[i])) != 9:
             #print("line 47")
             return False
-        if len(set(sub_marix(sudoku,0,0))) != 9:
-            #print("line 50")
+        if len(set(sub_marix(sudoku,0,0))) != 10:
+            print("line 50")
             return False
-        if len(set(sub_marix(sudoku,0,3))) != 9:
-            #print("line 53")
+        if len(set(sub_marix(sudoku,0,3))) != 10:
+            print("line 53")
             return False
-        if len(set(sub_marix(sudoku,0,6))) != 9:
-            #print("line 56")
+        if len(set(sub_marix(sudoku,0,6))) != 10:
+            print("line 56")
             return False
-        if len(set(sub_marix(sudoku,3,0))) != 9:
-            #print("line 59")
+        if len(set(sub_marix(sudoku,3,0))) != 10:
+            print("line 51")
             return False
-        if len(set(sub_marix(sudoku,3,3))) != 9:
-            #print("line 62")
+        if len(set(sub_marix(sudoku,3,3))) != 10:
+            print("line 62")
             return False
-        if len(set(sub_marix(sudoku,3,6))) != 9:
-            #print("line 65")
+        if len(set(sub_marix(sudoku,3,6))) != 10:
+            print("line 65")
             return False
-        if len(set(sub_marix(sudoku,6,0))) != 9:
-            #print("line 68")
+        if len(set(sub_marix(sudoku,6,0))) != 10:
+            print("line 68")
             return False
-        if len(set(sub_marix(sudoku,6,3))) != 9:
-            #print("line 71")
+        if len(set(sub_marix(sudoku,6,3))) != 10:
+            print("line 71")
             return False
-        if len(set(sub_marix(sudoku,6,6))) != 9:
-            #print("line 74")
+        if len(set(sub_marix(sudoku,6,6))) != 10:
+            print("line 74")
             return False
         return True
 
