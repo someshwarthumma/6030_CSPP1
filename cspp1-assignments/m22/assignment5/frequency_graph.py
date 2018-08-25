@@ -26,7 +26,6 @@ def frequency_graph(dictionary):
     '''
     To for the dictinary with appended # in place of value in the given dictionary
     '''
-    
     for key in dictionary:
         temp = dictionary[key]
         dictionary[key] = sub(temp)
