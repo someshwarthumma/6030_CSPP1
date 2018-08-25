@@ -90,7 +90,7 @@ def main():
         row = input().split(' ')
         sudoku.append(row)
     # call solution function and print result to console
-    print("sudoku:",sudoku)
+    #print("sudoku:",sudoku)
 
     print(check_sudoku(sudoku))
 
